@@ -48,3 +48,6 @@ Build a professional portfolio project that demonstrates DevOps, Cloud, Full-Sta
 ## Getting Started
 
 1. Clone the repository:
+
+--- 
+<p align="center"> ૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ </p>
