@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SCRIPTS_DIR="$HOME/CyberPulse/scripts"
+
+(crontab -l 2>/dev/null; echo "*/5 * * * * $SCRIPTS_DIR/collector.sh >> $SCRIPTS_DIR/collector.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "0 * * * * $SCRIPTS_DIR/collect_cpu.sh >> $SCRIPTS_DIR/cpu.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "0 * * * * $SCRIPTS_DIR/collect_ram.sh >> $SCRIPTS_DIR/ram.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "0 * * * * $SCRIPTS_DIR/collect_disk.sh >> $SCRIPTS_DIR/disk.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "*/10 * * * * $SCRIPTS_DIR/collect_network.sh >> $SCRIPTS_DIR/network.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "*/15 * * * * $SCRIPTS_DIR/collect_temp.sh >> $SCRIPTS_DIR/temp.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "0 0 * * * $SCRIPTS_DIR/collect_logs.sh >> $SCRIPTS_DIR/logs.log 2>&1") | crontab -

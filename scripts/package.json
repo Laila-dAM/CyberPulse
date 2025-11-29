@@ -1,0 +1,21 @@
+{
+  "name": "cyberpulse-scripts",
+  "version": "1.0.0",
+  "description": "Collection scripts for CyberPulse full-stack infrastructure monitoring system",
+  "main": "collector_master.sh",
+  "scripts": {
+    "install": "bash installer.sh",
+    "collect-all": "bash collector_master.sh",
+    "collect-cpu": "bash collect_cpu.sh",
+    "collect-ram": "bash collect_ram.sh",
+    "collect-disk": "bash collect_disk.sh",
+    "collect-network": "bash collect_network.sh",
+    "collect-temp": "bash collect_temp.sh",
+    "collect-logs": "bash collect_logs.sh",
+    "setup-cron": "bash cron-example"
+  },
+  "author": "CyberPulse Dev Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,4 @@
+id,timestamp,type,message,severity,resolved
+1,2025-11-29 12:05:00,CPU High,CPU usage exceeded 90%,critical,false
+2,2025-11-29 12:10:00,RAM High,RAM usage exceeded 85%,warning,true
+3,2025-11-29 12:15:00,Disk Low,Disk space below 10%,critical,false
