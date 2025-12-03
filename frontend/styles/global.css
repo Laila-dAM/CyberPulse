@@ -1,0 +1,224 @@
+/* ------------------------------
+   GLOBAL CYBERPULSE STYLING
+   Theme: Cyber Y2K – Neon Green & Purple
+   ------------------------------ */
+
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-panel: #111214;
+    --gray-400: #2a2a2a;
+    --gray-600: #3d3d3d;
+
+    --neon-green: #00ff9d;
+    --neon-purple: #b000ff;
+
+    --text-primary: #e6e6e6;
+    --text-secondary: #9e9e9e;
+
+    --border-neon: 2px solid rgba(0, 255, 157, 0.5);
+    --glow-green: 0 0 10px rgba(0, 255, 157, 0.8);
+    --glow-purple: 0 0 10px rgba(176, 0, 255, 0.7);
+
+    --font-main: "JetBrains Mono", "Consolas", monospace;
+}
+
+/* ------------------------------
+   RESET
+   ------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Y2K */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--neon-purple);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-green);
+}
+
+/* ------------------------------
+   GLOBAL LAYOUT
+   ------------------------------ */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* ------------------------------
+   TITLES & TEXT
+   ------------------------------ */
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: var(--neon-green);
+    text-shadow: var(--glow-green);
+}
+
+h2 {
+    color: var(--neon-purple);
+    text-shadow: var(--glow-purple);
+}
+
+/* Paragraphs */
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ------------------------------
+   LINKS
+   ------------------------------ */
+
+a {
+    color: var(--neon-green);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+a:hover {
+    color: var(--neon-purple);
+    text-shadow: var(--glow-purple);
+}
+
+/* ------------------------------
+   INPUTS & BUTTONS
+   ------------------------------ */
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: var(--bg-panel);
+    border: 1px solid var(--gray-600);
+    color: var(--text-primary);
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--neon-green);
+    box-shadow: var(--glow-green);
+}
+
+button,
+.btn {
+    background: var(--neon-purple);
+    color: black;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--neon-green);
+    box-shadow: var(--glow-green);
+}
+
+/* ------------------------------
+   PANELS & BOXES
+   ------------------------------ */
+
+.panel {
+    background: var(--bg-panel);
+    border: var(--border-neon);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.1);
+}
+
+.card {
+    background: #131313;
+    border: 1px solid var(--gray-400);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--neon-purple);
+    box-shadow: var(--glow-purple);
+}
+
+/* ------------------------------
+   ASCII TERMINAL MODE
+   ------------------------------ */
+
+.ascii-terminal {
+    font-family: monospace;
+    background: black;
+    color: var(--neon-green);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--neon-green);
+    text-shadow: var(--glow-green);
+    white-space: pre-wrap;
+    overflow-y: auto;
+    height: 300px;
+}
+
+/* ------------------------------
+   ANIMATIONS (Y2K)
+   ------------------------------ */
+
+@keyframes neon-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: neon-blink 0.7s infinite;
+}
+
+@keyframes glow-pulse {
+    0% { text-shadow: var(--glow-green); }
+    50% { text-shadow: var(--glow-purple); }
+    100% { text-shadow: var(--glow-green); }
+}
+
+.pulse {
+    animation: glow-pulse 2s infinite;
+}
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-secondary);
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPulse Dashboard</title>
+
+    <!-- Fonte futurista -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #d0d0d0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #111;
+            border-bottom: 2px solid #6f00ff;
+        }
+
+        header h1 {
+            color: #6f00ff;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 20px auto;
+        }
+
+        .section-title {
+            color: #00ff88;
+            font-size: 22px;
+            border-left: 4px solid #6f00ff;
+            padding-left: 10px;
+            margin-top: 35px;
+            margin-bottom: 10px;
+        }
+
+        /* GRID de métricas */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #6f00ff55;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 0px 14px #6f00ffaa;
+        }
+
+        .value {
+            font-size: 28px;
+            color: #00ff88;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            background: #0a0a0a;
+            border-top: 2px solid #6f00ff;
+            color: #777;
+            font-size: 14px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 300px;
+            background: #0f0f0f;
+            border-radius: 10px;
+            border: 1px solid #333;
+            box-shadow: 0px 0px 10px #6f00ff55;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>CYBERPULSE — SYSTEM MONITOR</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- ==== MÉTRICAS ==== -->
+        <h2 class="section-title">Live Metrics</h2>
+
+        <div class="metrics-grid">
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <p class="value" id="cpuValue">--%</p>
+            </div>
+
+            <div class="card">
+                <h3>RAM Usage</h3>
+                <p class="value" id="ramValue">--%</p>
+            </div>
+
+            <div class="card">
+                <h3>Disk Usage</h3>
+                <p class="value" id="diskValue">--%</p>
+            </div>
+
+            <div class="card">
+                <h3>Network</h3>
+                <p class="value" id="netValue">-- kB/s</p>
+            </div>
+
+            <div class="card">
+                <h3>Temperature</h3>
+                <p class="value" id="tempValue">--°C</p>
+            </div>
+        </div>
+
+        <!-- ==== GRÁFICOS ==== -->
+        <h2 class="section-title">Performance Charts</h2>
+
+        <canvas id="chartCPU"></canvas>
+        <canvas id="chartRAM" style="margin-top: 25px;"></canvas>
+
+    </div>
+
+    <footer>
+        CyberPulse © 2025 — Monitoring System by L.D.A.M
+    </footer>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Script principal -->
+    <script>
+        // Exemplos temporários — depois você conecta ao backend
+        setInterval(() => {
+            document.getElementById("cpuValue").innerText = Math.floor(Math.random() * 100) + "%";
+            document.getElementById("ramValue").innerText = Math.floor(Math.random() * 100) + "%";
+            document.getElementById("diskValue").innerText = Math.floor(Math.random() * 100) + "%";
+            document.getElementById("netValue").innerText = Math.floor(Math.random() * 500) + " kB/s";
+            document.getElementById("tempValue").innerText = (40 + Math.random() * 40).toFixed(1) + "°C";
+        }, 1500);
+
+        // Gráficos base
+        const ctx1 = document.getElementById('chartCPU');
+        const ctx2 = document.getElementById('chartRAM');
+
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['1','2','3','4','5'],
+                datasets: [{
+                    label: 'CPU %',
+                    data: [20, 40, 35, 60, 50],
+                    borderColor: '#6f00ff',
+                    backgroundColor: '#6f00ff55'
+                }]
+            }
+        });
+
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['1','2','3','4','5'],
+                datasets: [{
+                    label: 'RAM %',
+                    data: [60, 50, 70, 80, 65],
+                    borderColor: '#00ff88',
+                    backgroundColor: '#00ff8855'
+                }]
+            }
+        });
+    </script>
+
+</body>
+</html>

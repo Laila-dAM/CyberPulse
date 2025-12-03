@@ -1,0 +1,219 @@
+/* ------------------------------
+   CYBERPULSE – DASHBOARD STYLING
+   Theme: Cyber Y2K – Neon Green & Purple
+   ------------------------------ */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* ------------------------------
+   SIDEBAR
+   ------------------------------ */
+
+.sidebar {
+    background: #0d0d0d;
+    border-right: 2px solid rgba(0, 255, 157, 0.4);
+    padding: 25px 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+.sidebar h2 {
+    color: var(--neon-green);
+    text-shadow: var(--glow-green);
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 14px 0;
+}
+
+.sidebar a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.sidebar a:hover {
+    background: var(--bg-panel);
+    border-color: var(--neon-green);
+    box-shadow: var(--glow-green);
+    color: var(--neon-green);
+}
+
+/* ------------------------------
+   MAIN CONTENT
+   ------------------------------ */
+
+.main {
+    padding: 30px;
+}
+
+.main h1 {
+    color: var(--neon-green);
+    margin-bottom: 20px;
+    text-shadow: var(--glow-green);
+    font-size: 1.8rem;
+}
+
+/* ------------------------------
+   METRICS GRID
+   ------------------------------ */
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.metric-card {
+    background: #111214;
+    border: 1px solid var(--gray-400);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(176, 0, 255, 0.05);
+}
+
+.metric-card:hover {
+    border-color: var(--neon-purple);
+    box-shadow: var(--glow-purple);
+}
+
+.metric-card h3 {
+    font-size: 1rem;
+    color: var(--neon-purple);
+    margin-bottom: 10px;
+    text-shadow: var(--glow-purple);
+}
+
+.metric-value {
+    font-size: 2rem;
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: var(--glow-green);
+}
+
+/* ------------------------------
+   CHART PANEL
+   ------------------------------ */
+
+.chart-panel {
+    margin-top: 40px;
+    background: #121212;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid var(--gray-400);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.08);
+}
+
+.chart-panel h2 {
+    margin-bottom: 12px;
+    color: var(--neon-purple);
+    text-shadow: var(--glow-purple);
+}
+
+/* Canvas for charts (Chart.js) */
+.chart-canvas {
+    width: 100%;
+    height: 300px;
+}
+
+/* ------------------------------
+   ALERTS PANEL
+   ------------------------------ */
+
+.alerts-panel {
+    margin-top: 30px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 3px solid var(--neon-purple);
+    box-shadow: var(--glow-purple);
+}
+
+.alert-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--gray-600);
+}
+
+.alert-item:last-child {
+    border-bottom: none;
+}
+
+.alert-critical {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: var(--glow-green);
+}
+
+/* ------------------------------
+   ASCII TERMINAL SECTION
+   ------------------------------ */
+
+.ascii-container {
+    margin-top: 40px;
+    padding: 20px;
+    background: #000;
+    border-radius: 12px;
+    border: 2px solid var(--neon-green);
+    box-shadow: var(--glow-green);
+}
+
+.ascii-title {
+    color: var(--neon-green);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.ascii-box {
+    background: black;
+    color: var(--neon-green);
+    padding: 20px;
+    border-radius: 10px;
+    height: 250px;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    font-family: monospace;
+    text-shadow: var(--glow-green);
+}
+
+/* ------------------------------
+   RESPONSIVE
+   ------------------------------ */
+
+@media (max-width: 1024px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        border-bottom: 2px solid rgba(0, 255, 157, 0.3);
+    }
+}
+
+@media (max-width: 600px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

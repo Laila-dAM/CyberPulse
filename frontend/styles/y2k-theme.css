@@ -1,0 +1,176 @@
+/* ================================
+   Y2K THEME — CyberPulse Aesthetic
+   Fundo preto, neon verde/roxo,
+   brilhos, contornos luminosos,
+   efeitos cyber-tech
+===================================*/
+
+/* Paleta */
+:root {
+  --y2k-black: #050505;
+  --y2k-gray: #1a1a1a;
+  --y2k-green: #33ffcc;
+  --y2k-purple: #bc5bff;
+  --y2k-neon-pink: #ff4bd1;
+  --y2k-glow: 0 0 12px;
+}
+
+/* Fundo global */
+body {
+  background: var(--y2k-black);
+  color: #e6e6e6;
+  font-family: "Orbitron", "Outfit", sans-serif;
+  letter-spacing: 0.5px;
+  overflow-x: hidden;
+}
+
+/* Efeito scanlines suave */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  z-index: 10000;
+}
+
+/* Painéis neon */
+.y2k-panel {
+  background: var(--y2k-gray);
+  border: 1px solid var(--y2k-purple);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow:
+    var(--y2k-glow) var(--y2k-purple),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+}
+
+/* Botões neon */
+.y2k-btn {
+  padding: 12px 24px;
+  background: var(--y2k-purple);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow:
+    var(--y2k-glow) var(--y2k-purple),
+    inset 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.y2k-btn:hover {
+  background: var(--y2k-green);
+  box-shadow:
+    var(--y2k-glow) var(--y2k-green),
+    inset 0 0 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Títulos neon */
+.y2k-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--y2k-green);
+  text-shadow:
+    var(--y2k-glow) var(--y2k-green),
+    0 0 25px var(--y2k-green);
+}
+
+/* Linhas decorativas cyber */
+.y2k-divider {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--y2k-purple),
+    var(--y2k-green),
+    transparent
+  );
+}
+
+/* Inputs futuristas */
+.y2k-input {
+  width: 100%;
+  padding: 12px;
+  background: #0a0a0a;
+  border: 1px solid var(--y2k-purple);
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.y2k-input:focus {
+  outline: none;
+  border-color: var(--y2k-green);
+  box-shadow:
+    var(--y2k-glow) var(--y2k-green),
+    inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Cards cyber */
+.y2k-card {
+  background: #0e0e0e;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid var(--y2k-purple);
+  box-shadow:
+    var(--y2k-glow) var(--y2k-purple),
+    inset 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Brilhos pulsantes */
+@keyframes y2k-pulse {
+  0% { box-shadow: var(--y2k-glow) var(--y2k-purple); }
+  50% { box-shadow: var(--y2k-glow) var(--y2k-green); }
+  100% { box-shadow: var(--y2k-glow) var(--y2k-purple); }
+}
+
+.y2k-pulse {
+  animation: y2k-pulse 3s infinite ease-in-out;
+}
+
+/* Efeito de “borda digital” */
+.y2k-border {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--y2k-black), var(--y2k-black)) padding-box,
+    linear-gradient(90deg, var(--y2k-purple), var(--y2k-green)) border-box;
+  border-radius: 12px;
+}
+
+/* HUD-style labels */
+.y2k-label {
+  font-size: 0.9rem;
+  color: var(--y2k-purple);
+  letter-spacing: 1px;
+  text-shadow: var(--y2k-glow) var(--y2k-purple);
+}
+
+/* Links neon */
+a.y2k-link {
+  color: var(--y2k-green);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a.y2k-link:hover {
+  color: var(--y2k-purple);
+  text-shadow:
+    var(--y2k-glow) var(--y2k-purple),
+    0 0 12px var(--y2k-purple);
+}

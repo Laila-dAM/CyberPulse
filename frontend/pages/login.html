@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberPulse — Login</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/y2k-theme.css">
+</head>
+<body class="y2k-body">
+
+  <div class="login-container y2k-panel">
+    <h1 class="login-title y2k-glitch">CyberPulse Access</h1>
+
+    <form id="loginForm" class="login-form">
+      <div class="input-group">
+        <label for="username">USER ID</label>
+        <input type="text" id="username" required autocomplete="off">
+      </div>
+
+      <div class="input-group">
+        <label for="password">PASSCODE</label>
+        <input type="password" id="password" required autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn-login y2k-btn">ENTER SYSTEM</button>
+    </form>
+
+    <p class="login-footer">© CyberPulse System 20XX</p>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const payload = {
+        username: document.getElementById("username").value.trim(),
+        password: document.getElementById("password").value.trim(),
+      };
+
+      const res = await api.post("/auth/login", payload);
+
+      if (res && res.token) {
+        localStorage.setItem("token", res.token);
+        window.location.href = "dashboard.html";
+      } else {
+        alert("ACCESS DENIED");
+      }
+    });
+  </script>
+
+</body>
+</html>

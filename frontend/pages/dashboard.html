@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPulse | Dashboard</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/y2k-theme.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="y2k-bg">
+
+    <div id="terminal-switch" onclick="toggleTerminalMode()">TERMINAL MODE</div>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <h2 class="logo">CyberPulse</h2>
+            <nav>
+                <a class="active" href="dashboard.html">Dashboard</a>
+                <a href="#">Logs</a>
+                <a href="#">Settings</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+
+            <h1 class="page-title">System Monitoring</h1>
+
+            <section class="grid-cards">
+
+                <div class="card">
+                    <h3>CPU Usage</h3>
+                    <canvas id="cpuChart"></canvas>
+                </div>
+
+                <div class="card">
+                    <h3>RAM Usage</h3>
+                    <canvas id="ramChart"></canvas>
+                </div>
+
+                <div class="card">
+                    <h3>Disk Usage</h3>
+                    <canvas id="diskChart"></canvas>
+                </div>
+
+                <div class="card">
+                    <h3>Network I/O</h3>
+                    <canvas id="networkChart"></canvas>
+                </div>
+
+                <div class="card">
+                    <h3>Temperature</h3>
+                    <canvas id="tempChart"></canvas>
+                </div>
+
+            </section>
+
+            <section class="logs-section">
+                <h2>Real-Time Logs</h2>
+                <div id="logs-box"></div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../scripts/api.js"></script>
+    <script src="../scripts/charts.js"></script>
+    <script src="../scripts/realtime.js"></script>
+    <script src="../scripts/terminal-mode.js"></script>
+
+</body>
+</html>
