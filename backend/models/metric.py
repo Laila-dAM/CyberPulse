@@ -1,18 +1,14 @@
-from sqlalchemy import Column, Integer, Float, String, DateTime
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, Float, DateTime
 from datetime import datetime
-
-Base = declarative_base()
+from backend.core.database import Base
 
 class Metric(Base):
     __tablename__ = "metrics"
 
     id = Column(Integer, primary_key=True, index=True)
-    cpu_usage = Column(Float, nullable=False)
-    ram_usage = Column(Float, nullable=False)
-    disk_usage = Column(Float, nullable=False)
-    network_in = Column(Float, nullable=False)
-    network_out = Column(Float, nullable=False)
-    temperature = Column(Float, nullable=True)
-    log_count = Column(Integer, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=datetime.utcnow)
+    cpu = Column(Float, default=0.0)
+    ram = Column(Float, default=0.0)
+    disk = Column(Float, default=0.0)
+    network = Column(Float, default=0.0)
+    temperature = Column(Float, default=0.0)

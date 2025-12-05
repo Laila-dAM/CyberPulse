@@ -1,8 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean
-from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
-
-Base = declarative_base()
+from backend.core.database import Base
 
 class Alert(Base):
     __tablename__ = "alerts"

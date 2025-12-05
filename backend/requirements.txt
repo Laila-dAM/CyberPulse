@@ -1,0 +1,12 @@
+Set-Content -Path requirements.txt -Value @'
+fastapi
+uvicorn
+psycopg2-binary
+pydantic
+SQLAlchemy
+scikit-learn
+numpy
+pandas
+python-jose
+passlib[bcrypt]
+'@

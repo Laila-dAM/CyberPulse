@@ -21,7 +21,7 @@ class PredictionResponse(BaseModel):
 def train_predict_model(metrics: List[Metric], target_attr: str, future_seconds: int = 60):
     if not metrics:
         return None
-    timestamps = np.array([(m.timestamp - metrics[0].timestamp).total_seconds() for m in metrics]).reshape(-1,1)
+    timestamps = np.array([(m.timestamp - metrics[0].timestamp).total_seconds() for m in metrics]).reshape(-1, 1)
     values = np.array([getattr(m, target_attr) for m in metrics])
     model = LinearRegression().fit(timestamps, values)
     future_time = np.array([[timestamps[-1][0] + future_seconds]])

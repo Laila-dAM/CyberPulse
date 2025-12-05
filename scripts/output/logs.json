@@ -1,0 +1,322 @@
+﻿{
+    "timestamp":  "2025-12-04T21:25:20.5628259-03:00",
+    "system":  {
+                   "critical":  {
+
+                                },
+                   "error":  [
+                                 {
+                                     "TimeCreated":  "\/Date(1764893071887)\/",
+                                     "Level":  "Erro",
+                                     "Id":  1801,
+                                     "Source":  "Microsoft-Windows-TPM-WMI",
+                                     "Message":  "Secure Boot certificates have been updated but are not yet applied to the device firmware. Review the published guidance to complete the update and ensure full protection. This device signature information is included here.\r\nDeviceAttributes: BaseBoardManufacturer:Gigabyte Technology Co., Ltd.;FirmwareManufacturer:American Megatrends International, LLC.;FirmwareVersion:F1;OEMModelNumber:B550M DS3H AC R2;OEMModelBaseBoard:B550M DS3H AC R2;OEMModelSystemFamily:B550 MB;OEMManufacturerName:Gigabyte Technology Co., Ltd.;OEMModelSKU:Default string;OSArchitecture:amd64;\r\nBucketId: f3f1e0e8ac097573bfcb327afd14a29110f05832e7e2c614c884522610f51e1d\r\nBucketConfidenceLevel: \r\nUpdateType: \r\nFor more information, please see https://go.microsoft.com/fwlink/?linkid=2301018."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892777417)\/",
+                                     "Level":  "Erro",
+                                     "Id":  1040,
+                                     "Source":  "Microsoft-Windows-TPM-WMI",
+                                     "Message":  "As verificações de integridade de pré-atestado confirmam que um componente crítico falhou e o dispositivo não deve ser aprovado no atestado.\r\n Consulte C:\\WINDOWS\\Logs\\MeasuredBoot\\0000000031-0000000000.json para obter informações detalhadas sobre quais verificações foram feitas."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892763850)\/",
+                                     "Level":  "Erro",
+                                     "Id":  124,
+                                     "Source":  "Microsoft-Windows-Kernel-Boot",
+                                     "Message":  "A verificação da política de habilitação de segurança baseada em virtualização na fase 0 falhou com o status: O VSM (Modo de Segurança Virtual) não foi inicializado. O hipervisor ou o VSM pode não estar presente ou habilitado."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892763849)\/",
+                                     "Level":  "Erro",
+                                     "Id":  42,
+                                     "Source":  "Microsoft-Windows-Hyper-V-Hypervisor",
+                                     "Message":  "Falha na inicialização do hipervisor; A SVM não está presente ou não está habilitada no BIOS."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892740809)\/",
+                                     "Level":  "Erro",
+                                     "Id":  10010,
+                                     "Source":  "Microsoft-Windows-DistributedCOM",
+                                     "Message":  "O servidor {740FE937-01F7-4482-AA62-C83F0AD3D6D0} não se registrou no DCOM dentro do tempo limite necessário."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892740746)\/",
+                                     "Level":  "Erro",
+                                     "Id":  10010,
+                                     "Source":  "Microsoft-Windows-DistributedCOM",
+                                     "Message":  "O servidor {740FE937-01F7-4482-AA62-C83F0AD3D6D0} não se registrou no DCOM dentro do tempo limite necessário."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892740683)\/",
+                                     "Level":  "Erro",
+                                     "Id":  10010,
+                                     "Source":  "Microsoft-Windows-DistributedCOM",
+                                     "Message":  "O servidor {6FA05A24-B1DF-4155-909E-7B424F2D2BB5} não se registrou no DCOM dentro do tempo limite necessário."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892740637)\/",
+                                     "Level":  "Erro",
+                                     "Id":  10010,
+                                     "Source":  "Microsoft-Windows-DistributedCOM",
+                                     "Message":  "O servidor {6FA05A24-B1DF-4155-909E-7B424F2D2BB5} não se registrou no DCOM dentro do tempo limite necessário."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764892740564)\/",
+                                     "Level":  "Erro",
+                                     "Id":  10010,
+                                     "Source":  "Microsoft-Windows-DistributedCOM",
+                                     "Message":  "O servidor {6FA05A24-B1DF-4155-909E-7B424F2D2BB5} não se registrou no DCOM dentro do tempo limite necessário."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764882616725)\/",
+                                     "Level":  "Erro",
+                                     "Id":  1040,
+                                     "Source":  "Microsoft-Windows-TPM-WMI",
+                                     "Message":  "As verificações de integridade de pré-atestado confirmam que um componente crítico falhou e o dispositivo não deve ser aprovado no atestado.\r\n Consulte C:\\WINDOWS\\Logs\\MeasuredBoot\\0000000030-0000000001.json para obter informações detalhadas sobre quais verificações foram feitas."
+                                 },
+                                 {
+                                     "TimeCreated":  "\/Date(1764882616197)\/",
+                                     "Level":  "Erro",
+                                     "Id":  10317,
+                                     "Source":  "Microsoft-Windows-NDIS",
+                                     "Message":  "A miniporta SAMSUNG Mobile USB Remote NDIS Network Device #3, {a4bf6183-053c-439f-83d0-c5d51ef5ee42}, tinha o evento Fatal error: The miniport has failed a power transition to operational power"
+                                 }
+                             ],
+                   "warning":  [
+                                   {
+                                       "TimeCreated":  "\/Date(1764893211868)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão padrão-computador não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{C2F03A33-21F5-47FA-B4BB-156362A2F239}\r\n e APPID \r\n{316CDED5-E4AE-4B15-9113-7055D84DCC97}\r\n ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764893211868)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n e APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764893211867)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão padrão-computador não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{C2F03A33-21F5-47FA-B4BB-156362A2F239}\r\n e APPID \r\n{316CDED5-E4AE-4B15-9113-7055D84DCC97}\r\n ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764893211866)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n e APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892928738)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  1014,
+                                       "Source":  "Microsoft-Windows-DNS-Client",
+                                       "Message":  "A resolução de nome para o t-ring-fdv2.msedge.net atingiu o tempo limite depois que nenhum dos servidores DNS configurados respondeu. PID do 10172."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892894388)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Iniciar para o aplicativo de Servidor COM com CLSID \r\nWindows.SecurityCenter.WscDataProtection\r\n e APPID \r\nNão Disponível\r\n ao usuário AUTORIDADE NT\\SISTEMA SID (S-1-5-18) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892894388)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Iniciar para o aplicativo de Servidor COM com CLSID \r\nWindows.SecurityCenter.WscBrokerManager\r\n e APPID \r\nNão Disponível\r\n ao usuário AUTORIDADE NT\\SISTEMA SID (S-1-5-18) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892894388)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Iniciar para o aplicativo de Servidor COM com CLSID \r\nWindows.SecurityCenter.SecurityAppBroker\r\n e APPID \r\nNão Disponível\r\n ao usuário AUTORIDADE NT\\SISTEMA SID (S-1-5-18) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892793256)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}\r\n e APPID \r\n{15C20B67-12E7-4BB6-92BB-7AFF07997402}\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892787152)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}\r\n e APPID \r\n{15C20B67-12E7-4BB6-92BB-7AFF07997402}\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos OpenAI.ChatGPT-Desktop_1.2025.258.0_x64__2p2nqsd0c76g0 SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892785130)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Iniciar para o aplicativo de Servidor COM com CLSID \r\nWindows.SecurityCenter.WscCloudBackupProvider\r\n e APPID \r\nNão Disponível\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892783245)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Iniciar para o aplicativo de Servidor COM com CLSID \r\nWindows.SecurityCenter.WscCloudBackupProvider\r\n e APPID \r\nNão Disponível\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764892771830)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  225,
+                                       "Source":  "Microsoft-Windows-Kernel-PnP",
+                                       "Message":  "O aplicativo \\Device\\HarddiskVolume3\\Windows\\System32\\audiodg.exe com id de processo 3488 interrompeu a remoção ou ejeção do dispositivo PCI\\VEN_1002\u0026DEV_AAE0\u0026SUBSYS_AAE01002\u0026REV_00\\4\u00262283f625\u00260\u00260119.\r\nLinha de comando do processo: C:\\WINDOWS\\system32\\AUDIODG.EXE 0x0000000000000564\r\nLista de dispositivos afetados:\r\nHDAUDIO\\FUNC_01\u0026VEN_1002\u0026DEV_AA01\u0026SUBSYS_00AA0100\u0026REV_1007\\5\u00265c78c7d\u00260\u00260001\r\n"
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764891843223)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  1014,
+                                       "Source":  "Microsoft-Windows-DNS-Client",
+                                       "Message":  "A resolução de nome para o t-ring-fdv2.msedge.net atingiu o tempo limite depois que nenhum dos servidores DNS configurados respondeu. PID do 12160."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764886787585)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}\r\n e APPID \r\n{15C20B67-12E7-4BB6-92BB-7AFF07997402}\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos MicrosoftWindows.Client.WebExperience_525.31002.150.0_x64__cw5n1h2txyewy SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764885422606)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  4266,
+                                       "Source":  "Tcpip",
+                                       "Message":  "Falha em solicitação para alocar número de porta efêmero do espaço de porta UDP global porque todas essas portas estão em uso."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764882908668)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}\r\n e APPID \r\n{15C20B67-12E7-4BB6-92BB-7AFF07997402}\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764882632529)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}\r\n e APPID \r\n{15C20B67-12E7-4BB6-92BB-7AFF07997402}\r\n ao usuário DESKTOP-I7HQI5P\\Pichau SID (S-1-5-21-2207863992-1957197688-2245586420-1000) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos OpenAI.ChatGPT-Desktop_1.2025.258.0_x64__2p2nqsd0c76g0 SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764882612018)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n e APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   },
+                                   {
+                                       "TimeCreated":  "\/Date(1764882612016)\/",
+                                       "Level":  "Aviso",
+                                       "Id":  10016,
+                                       "Source":  "Microsoft-Windows-DistributedCOM",
+                                       "Message":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n e APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+                                   }
+                               ]
+               },
+    "application":  {
+                        "critical":  {
+
+                                     },
+                        "error":  [
+                                      {
+                                          "TimeCreated":  "\/Date(1764894246002)\/",
+                                          "Level":  "Erro",
+                                          "Id":  1005,
+                                          "Source":  "Microsoft-Windows-Perflib",
+                                          "Message":  "A tentativa de localizar o procedimento Open \"OpenLsaPerformanceData\" na DLL \"C:\\Windows\\System32\\Secur32.dll\" para o serviço \"Lsa\" falhou com o código de erro do Win32 Não foi possível encontrar o procedimento especificado.. Os dados de desempenho desse serviço não estarão disponíveis."
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764892778211)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x803F7001\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=UserLogon;SessionId=1"
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764892775572)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x803F7001\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=NetworkAvailable"
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764882631040)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x803F7001\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=NetworkAvailable"
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764882623755)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x800704CF\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=NetworkAvailable"
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764882615238)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x800704CF\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=UserLogon;SessionId=2"
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764802368451)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x803F7001\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=UserLogon;SessionId=1"
+                                      },
+                                      {
+                                          "TimeCreated":  "\/Date(1764802351290)\/",
+                                          "Level":  "Erro",
+                                          "Id":  8198,
+                                          "Source":  "Microsoft-Windows-Security-SPP",
+                                          "Message":  "Falha na Ativação de Licença (slui.exe). Código de erro:\r\nhr=0x8007139F\r\nArgumento de linha de comando:\r\nRuleId=31e71c49-8da7-4a2f-ad92-45d98a1c79ba;Action=AutoActivate;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c;NotificationInterval=1440;Trigger=NetworkAvailable"
+                                      }
+                                  ],
+                        "warning":  [
+                                        {
+                                            "TimeCreated":  "\/Date(1764892389311)\/",
+                                            "Level":  "Aviso",
+                                            "Id":  1001,
+                                            "Source":  "MsiInstaller",
+                                            "Message":  "Detecção de produto \u0027{8705254B-3AE0-4CFA-93D5-F71DCDE9ED2B}\u0027, recurso \u0027WSL\u0027 falhou durante solicitação do componente \u0027{F0C8D6BA-1502-41E7-BF72-D93DFA134730}\u0027"
+                                        },
+                                        {
+                                            "TimeCreated":  "\/Date(1764892389310)\/",
+                                            "Level":  "Aviso",
+                                            "Id":  1004,
+                                            "Source":  "MsiInstaller",
+                                            "Message":  "Detecção de produto \u0027{8705254B-3AE0-4CFA-93D5-F71DCDE9ED2B}\u0027, recurso \u0027WSL\u0027, componente \u0027{93CBFF23-A04C-4344-A332-238CE5B97AED}\u0027 falhou.  O recurso \u0027HKEY_LOCAL_MACHINE(64)\\SOFTWARE\\Classes\\CLSID\\{B2B4A4D1-2754-4140-A2EB-9A76D9D7CDC6}\\\u0027 não existe."
+                                        },
+                                        {
+                                            "TimeCreated":  "\/Date(1764721831094)\/",
+                                            "Level":  "Aviso",
+                                            "Id":  63,
+                                            "Source":  "Microsoft-Windows-WMI",
+                                            "Message":  "Um provedor, DMWmiBridgeProv1, foi registrado no namespace de Instrumentação de Gerenciamento do Windows root\\cimv2\\mdm\\dmmap para usar a conta LocalSystem. Essa conta é privilegiada e o provedor pode causar uma violação de segurança se não representar corretamente as solicitações do usuário."
+                                        },
+                                        {
+                                            "TimeCreated":  "\/Date(1764721831093)\/",
+                                            "Level":  "Aviso",
+                                            "Id":  63,
+                                            "Source":  "Microsoft-Windows-WMI",
+                                            "Message":  "Um provedor, DMWmiBridgeProv1, foi registrado no namespace de Instrumentação de Gerenciamento do Windows root\\cimv2\\mdm\\dmmap para usar a conta LocalSystem. Essa conta é privilegiada e o provedor pode causar uma violação de segurança se não representar corretamente as solicitações do usuário."
+                                        }
+                                    ]
+                    }
+}
