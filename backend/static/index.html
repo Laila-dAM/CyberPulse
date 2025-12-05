@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberPulse Dashboard</title>
 
-    <!-- Fonte futurista -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
@@ -45,7 +44,6 @@
             margin-bottom: 10px;
         }
 
-        /* GRID de métricas */
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -100,7 +98,6 @@
 
     <div class="container">
 
-        <!-- ==== MÉTRICAS ==== -->
         <h2 class="section-title">Live Metrics</h2>
 
         <div class="metrics-grid">
@@ -130,7 +127,6 @@
             </div>
         </div>
 
-        <!-- ==== GRÁFICOS ==== -->
         <h2 class="section-title">Performance Charts</h2>
 
         <canvas id="chartCPU"></canvas>
@@ -142,12 +138,10 @@
         CyberPulse © 2025 — Monitoring System by L.D.A.M
     </footer>
 
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Script principal -->
     <script>
-        // Exemplos temporários — depois você conecta ao backend
+        // Temporary demo values
         setInterval(() => {
             document.getElementById("cpuValue").innerText = Math.floor(Math.random() * 100) + "%";
             document.getElementById("ramValue").innerText = Math.floor(Math.random() * 100) + "%";
@@ -156,7 +150,6 @@
             document.getElementById("tempValue").innerText = (40 + Math.random() * 40).toFixed(1) + "°C";
         }, 1500);
 
-        // Gráficos base
         const ctx1 = document.getElementById('chartCPU');
         const ctx2 = document.getElementById('chartRAM');
 

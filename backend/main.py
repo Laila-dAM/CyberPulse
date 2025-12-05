@@ -1,9 +1,11 @@
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from backend.api import metrics, alerts, predict
+from backend.api import metrics, alerts, predict, auth, users
 from backend.core.config import settings
+from backend.core.database import init_db
 
 app = FastAPI(
     title="CyberPulse API",
@@ -19,13 +21,33 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.mount("/static", StaticFiles(directory="backend/static"), name="static")
+
 app.include_router(metrics.router, prefix="/metrics", tags=["Metrics"])
 app.include_router(alerts.router, prefix="/alerts", tags=["Alerts"])
 app.include_router(predict.router, prefix="/predict", tags=["Predict"])
+app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+app.include_router(users.router, prefix="/users", tags=["Users"])
+
+@app.on_event("startup")
+def startup_event():
+    init_db()
 
 @app.get("/")
-async def root():
-    return {"message": "Welcome to CyberPulse - Full Stack Infrastructure Monitoring"}
+def serve_home():
+    return FileResponse("backend/static/index.html")
+
+@app.get("/dashboard")
+def serve_dashboard():
+    return FileResponse("backend/static/pages/dashboard.html")
+
+@app.get("/alerts")
+def serve_alerts():
+    return FileResponse("backend/static/pages/alerts.html")
+
+@app.get("/login")
+def serve_login():
+    return FileResponse("backend/static/pages/login.html")
 
 @app.get("/health")
 async def health_check():

@@ -1,0 +1,25 @@
+from fastapi import APIRouter, Depends, HTTPException, Response
+from schemas.auth import LoginRequest, UserResponse
+from core.security import create_access_token, set_jwt_cookie, clear_jwt_cookie
+
+router = APIRouter(prefix="/auth")
+
+fake_user = {
+    "id": 1,
+    "email": "admin@admin.com",
+    "password": "123456"
+}
+
+@router.post("/login")
+def login(data: LoginRequest, response: Response):
+    if data.email != fake_user["email"] or data.password != fake_user["password"]:
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+
+    token = create_access_token({"sub": str(fake_user["id"])})
+    set_jwt_cookie(response, token)
+    return {"message": "Logged in successfully"}
+
+@router.post("/logout")
+def logout(response: Response):
+    clear_jwt_cookie(response)
+    return {"message": "Logged out"}

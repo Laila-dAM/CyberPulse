@@ -1,25 +1,33 @@
-import os
-from pydantic import BaseSettings
+from datetime import datetime, timedelta
+from fastapi import Response
+from jose import jwt
+from core.config import settings
 
-class Settings(BaseSettings):
-    PROJECT_NAME: str = "CyberPulse"
-    VERSION: str = "1.0.0"
-    DEBUG: bool = True
-    ENVIRONMENT: str = "development"
+def create_access_token(data: dict):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + timedelta(minutes=settings.TOKEN_EXPIRE_MINUTES)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
+    return encoded_jwt
 
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./cyberpulse.db")
-    MONGO_URI: str = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-    AI_MODEL_PATH: str = os.getenv("AI_MODEL_PATH", "./models/anomaly_model.pkl")
+def set_jwt_cookie(response: Response, token: str):
+    response.set_cookie(
+        key="access_token",
+        value=token,
+        httponly=True,
+        secure=False,
+        samesite="lax",
+        max_age=settings.TOKEN_EXPIRE_MINUTES * 60,
+        path="/"
+    )
 
-    ALLOWED_ORIGINS: list = [
-        "http://localhost",
-        "http://localhost:3000",
-        "http://127.0.0.1",
-        "https://your-frontend-domain.com"
-    ]
-
-    TOKEN_SECRET_KEY: str = os.getenv("TOKEN_SECRET_KEY", "your-secret-key")
-    TOKEN_ALGORITHM: str = "HS256"
-    TOKEN_EXPIRE_MINUTES: int = 60
-
-settings = Settings()
+def clear_jwt_cookie(response: Response):
+    response.set_cookie(
+        key="access_token",
+        value="",
+        httponly=True,
+        secure=False,
+        samesite="lax",
+        max_age=0,
+        path="/"
+    )

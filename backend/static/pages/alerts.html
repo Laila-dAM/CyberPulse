@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPulse — Alerts</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/y2k-theme.css">
+</head>
+<body class="theme-y2k">
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <h2 class="logo">CyberPulse</h2>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="alerts.html" class="active">Alerts</a>
+                <a href="logs.html">Logs</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">System Alerts</h1>
+
+            <div class="alerts-container" id="alertsList"></div>
+        </main>
+    </div>
+
+    <script src="../scripts/api.js"></script>
+    <script>
+        async function loadAlerts() {
+            const data = await api.get("/alerts/");
+
+            const container = document.getElementById("alertsList");
+            container.innerHTML = "";
+
+            if (!data || data.length === 0) {
+                container.innerHTML = "<p>No alerts found.</p>";
+                return;
+            }
+
+            data.forEach(alert => {
+                const card = document.createElement("div");
+                card.classList.add("alert-card", alert.level);
+
+                card.innerHTML = `
+                    <h3>${alert.title}</h3>
+                    <p>Server: ${alert.source}</p>
+                    <p>${alert.message}</p>
+                    <button class="btn-ack" onclick="ackAlert('${alert.id}')">Acknowledge</button>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        async function ackAlert(id) {
+            await api.post("/alerts/ack", { id });
+            loadAlerts();
+        }
+
+        loadAlerts();
+    </script>
+</body>
+</html>

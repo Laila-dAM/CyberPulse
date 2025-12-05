@@ -30,6 +30,7 @@
   </div>
 
   <script src="../scripts/api.js"></script>
+
   <script>
     const form = document.getElementById("loginForm");
 
@@ -38,13 +39,13 @@
 
       const payload = {
         username: document.getElementById("username").value.trim(),
-        password: document.getElementById("password").value.trim(),
+        password: document.getElementById("password").value.trim()
       };
 
-      const res = await api.post("/auth/login", payload);
+      const response = await api.post("/auth/login", payload);
 
-      if (res && res.token) {
-        localStorage.setItem("token", res.token);
+      if (response && response.token) {
+        localStorage.setItem("token", response.token);
         window.location.href = "dashboard.html";
       } else {
         alert("ACCESS DENIED");
