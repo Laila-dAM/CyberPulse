@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-router = APIRouter()
+router = APIRouter(prefix="/predict", tags=["Predict"])
 
 class PredictionResponse(BaseModel):
     timestamp: datetime

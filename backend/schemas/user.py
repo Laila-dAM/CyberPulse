@@ -1,20 +1,18 @@
 from pydantic import BaseModel
 from datetime import datetime
 
-class AlertBase(BaseModel):
-    metric_type: str
-    value: float
-    threshold: float
-    severity: str
-    message: str
-    acknowledged: bool = False
+class UserBase(BaseModel):
+    username: str
+    email: str
+    is_active: bool = True
 
-class AlertCreate(AlertBase):
-    pass
+class UserCreate(UserBase):
+    password: str
 
-class Alert(AlertBase):
+class User(UserBase):
     id: int
     created_at: datetime
 
-    class Config:
-        orm_mode = True
+    model_config = {
+        "from_attributes": True
+    }

@@ -1,14 +1,23 @@
 from datetime import datetime, timedelta
 from fastapi import Response
 from jose import jwt
-from core.config import settings
+from pydantic_settings import BaseSettings
+import os
+
+class Settings(BaseSettings):
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./cyberpulse.db")
+    TOKEN_SECRET_KEY: str = os.getenv("TOKEN_SECRET_KEY", "your_secret_key_here")
+    TOKEN_ALGORITHM: str = os.getenv("TOKEN_ALGORITHM", "HS256")
+    TOKEN_EXPIRE_MINUTES: int = int(os.getenv("TOKEN_EXPIRE_MINUTES", 60))
+    ALLOWED_ORIGINS: list[str] = ["*"]  # Adicione isto para o CORS
+
+settings = Settings()
 
 def create_access_token(data: dict):
     to_encode = data.copy()
     expire = datetime.utcnow() + timedelta(minutes=settings.TOKEN_EXPIRE_MINUTES)
     to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
-    return encoded_jwt
+    return jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
 
 def set_jwt_cookie(response: Response, token: str):
     response.set_cookie(

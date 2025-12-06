@@ -23,11 +23,11 @@ app.add_middleware(
 
 app.mount("/static", StaticFiles(directory="backend/static"), name="static")
 
-app.include_router(metrics.router, prefix="/metrics", tags=["Metrics"])
-app.include_router(alerts.router, prefix="/alerts", tags=["Alerts"])
-app.include_router(predict.router, prefix="/predict", tags=["Predict"])
-app.include_router(auth.router, prefix="/auth", tags=["Auth"])
-app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(metrics.router)
+app.include_router(alerts.router)
+app.include_router(predict.router)
+app.include_router(auth.router)
+app.include_router(users.router)
 
 @app.on_event("startup")
 def startup_event():

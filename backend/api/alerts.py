@@ -6,7 +6,7 @@ from backend.schemas.alert import Alert as AlertSchema
 from backend.core.database import get_db_session
 from sqlalchemy.orm import Session
 
-router = APIRouter()
+router = APIRouter(prefix="/alerts", tags=["Alerts"])
 
 @router.get("/", response_model=List[AlertSchema])
 def get_all_alerts(skip: int = 0, limit: int = 100, db: Session = Depends(get_db_session)):
@@ -22,5 +22,8 @@ def get_latest_alert(db: Session = Depends(get_db_session)):
 
 @router.get("/history", response_model=List[AlertSchema])
 def get_alert_history(start: datetime, end: datetime, db: Session = Depends(get_db_session)):
-    alerts = db.query(Alert).filter(Alert.created_at >= start, Alert.created_at <= end).all()
+    alerts = db.query(Alert).filter(
+        Alert.created_at >= start,
+        Alert.created_at <= end
+    ).all()
     return alerts
