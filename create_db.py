@@ -1,6 +1,5 @@
 from backend.core.database import Base, engine
-from backend.models.metric import Metric
-from backend.models.alert import Alert
+from backend.models import models
 
 Base.metadata.create_all(bind=engine)
-print("Database created successfully!")
+print("Database created successfully")

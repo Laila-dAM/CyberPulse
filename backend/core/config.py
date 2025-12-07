@@ -3,6 +3,7 @@ from typing import Any
 from jose import jwt
 from fastapi import Response
 from pydantic_settings import BaseSettings
+from passlib.context import CryptContext
 
 class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./cyberpulse.db"
@@ -12,16 +13,19 @@ class Settings(BaseSettings):
     ALLOWED_ORIGINS: list[str] = ["*"]
 
 settings = Settings()
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-def create_access_token(data: dict[str, Any], expires_delta: timedelta = None):
+def create_access_token(data: dict[str, Any], expires_delta: timedelta = None) -> str:
     to_encode = data.copy()
     expire = datetime.utcnow() + (expires_delta or timedelta(minutes=settings.TOKEN_EXPIRE_MINUTES))
     to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
-    return encoded_jwt
+    return jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
 
 def set_jwt_cookie(response: Response, token: str):
     response.set_cookie(key="access_token", value=token, httponly=True)
 
 def clear_jwt_cookie(response: Response):
     response.delete_cookie(key="access_token")
+
+def hash_password(password: str) -> str:
+    return pwd_context.hash(password)

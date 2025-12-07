@@ -1,9 +1,21 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean, JSON, ForeignKey, func
 from sqlalchemy.orm import relationship
 from backend.core.database import Base
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+class User(Base):
+    __tablename__ = "users"
+    __table_args__ = {"extend_existing": True}
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String(128), unique=True, index=True, nullable=False)
+    hashed_password = Column(String(256), nullable=False)
+    created_at = Column(DateTime, default=func.now())
 
 class Metric(Base):
     __tablename__ = "metrics"
+    __table_args__ = {"extend_existing": True}
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(128), index=True, nullable=False)
     value = Column(Float, nullable=False)
@@ -13,6 +25,7 @@ class Metric(Base):
 
 class Alert(Base):
     __tablename__ = "alerts"
+    __table_args__ = {"extend_existing": True}
     id = Column(Integer, primary_key=True, index=True)
     metric_id = Column(Integer, ForeignKey("metrics.id"), nullable=True)
     metric_name = Column(String(128), nullable=False)
@@ -26,6 +39,7 @@ class Alert(Base):
 
 class Prediction(Base):
     __tablename__ = "predictions"
+    __table_args__ = {"extend_existing": True}
     id = Column(Integer, primary_key=True, index=True)
     metric_name = Column(String(128), nullable=False, index=True)
     predicted_value = Column(Float, nullable=False)
