@@ -111,7 +111,8 @@ Submit pull requests for improvements, new features, bug fixes, or documentation
 ------------------------------------------------------------
 ## License
 
-In progress...
+CyberPulse is distributed under the MIT License.  
+For more information, see the [LICENSE](./LICENSE) file.
 
 ------------------------------------------------------------
 ## Roadmap
