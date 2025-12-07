@@ -126,5 +126,14 @@ Planned or optional future enhancements:
 - Notifications triggered by alerts (email, webhook, Slack)
 - Responsive dashboard for mobile displays
 
+------------------------------------------------------------
+## Releases
+
+The latest stable version is **v1.0.0**.
+
+You can download it here:
+```python
+https://github.com/Laila-dAM/CyberPulse/releases
+```
 --- 
 <p align="center"> ૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ </p>
