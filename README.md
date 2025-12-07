@@ -126,3 +126,5 @@ Planned or optional future enhancements:
 - Notifications triggered by alerts (email, webhook, Slack)
 - Responsive dashboard for mobile displays
 
+--- 
+<p align="center"> ૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ </p>
