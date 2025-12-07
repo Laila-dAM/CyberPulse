@@ -1,20 +1,14 @@
 from pydantic import BaseModel
 from datetime import datetime
 
-class MetricBase(BaseModel):
+class Metric(BaseModel):
+    id: int
+    timestamp: datetime
     cpu: float
     ram: float
     disk: float
     network: float
     temperature: float
 
-class MetricCreate(MetricBase):
-    pass
-
-class Metric(MetricBase):
-    id: int
-    timestamp: datetime
-
-    model_config = {
-        "from_attributes": True
-    }
+    class Config:
+        orm_mode = True

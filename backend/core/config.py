@@ -1,42 +1,27 @@
 from datetime import datetime, timedelta
-from fastapi import Response
+from typing import Any
 from jose import jwt
+from fastapi import Response
 from pydantic_settings import BaseSettings
-import os
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./cyberpulse.db")
-    TOKEN_SECRET_KEY: str = os.getenv("TOKEN_SECRET_KEY", "your_secret_key_here")
-    TOKEN_ALGORITHM: str = os.getenv("TOKEN_ALGORITHM", "HS256")
-    TOKEN_EXPIRE_MINUTES: int = int(os.getenv("TOKEN_EXPIRE_MINUTES", 60))
-    ALLOWED_ORIGINS: list[str] = ["*"]  # Adicione isto para o CORS
+    DATABASE_URL: str = "sqlite:///./cyberpulse.db"
+    TOKEN_SECRET_KEY: str = "your_secret_key_here"
+    TOKEN_ALGORITHM: str = "HS256"
+    TOKEN_EXPIRE_MINUTES: int = 60
+    ALLOWED_ORIGINS: list[str] = ["*"]
 
 settings = Settings()
 
-def create_access_token(data: dict):
+def create_access_token(data: dict[str, Any], expires_delta: timedelta = None):
     to_encode = data.copy()
-    expire = datetime.utcnow() + timedelta(minutes=settings.TOKEN_EXPIRE_MINUTES)
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=settings.TOKEN_EXPIRE_MINUTES))
     to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
+    encoded_jwt = jwt.encode(to_encode, settings.TOKEN_SECRET_KEY, algorithm=settings.TOKEN_ALGORITHM)
+    return encoded_jwt
 
 def set_jwt_cookie(response: Response, token: str):
-    response.set_cookie(
-        key="access_token",
-        value=token,
-        httponly=True,
-        secure=False,
-        samesite="lax",
-        max_age=settings.TOKEN_EXPIRE_MINUTES * 60,
-        path="/"
-    )
+    response.set_cookie(key="access_token", value=token, httponly=True)
 
 def clear_jwt_cookie(response: Response):
-    response.set_cookie(
-        key="access_token",
-        value="",
-        httponly=True,
-        secure=False,
-        samesite="lax",
-        max_age=0,
-        path="/"
-    )
+    response.delete_cookie(key="access_token")
