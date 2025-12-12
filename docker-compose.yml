@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: cyber
+      POSTGRES_PASSWORD: cyberpass
+      POSTGRES_DB: cyberpulse
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://cyber:cyberpass@db:5432/cyberpulse
+    ports:
+      - "8000:8000"
+
+volumes:
+  db_data:

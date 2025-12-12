@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
-from typing import Any
+from typing import Any, ClassVar
 from jose import jwt
 from fastapi import Response
 from pydantic_settings import BaseSettings
 from passlib.context import CryptContext
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = "sqlite:///./cyberpulse.db"
+    DATABASE_URL: ClassVar[str] = "sqlite:///../cyberpulse.db"
     TOKEN_SECRET_KEY: str = "your_secret_key_here"
     TOKEN_ALGORITHM: str = "HS256"
     TOKEN_EXPIRE_MINUTES: int = 60

@@ -6,6 +6,7 @@ from backend.api.alerts import router as alerts_router
 from backend.api.predict import router as predict_router
 from backend.api.auth import router as auth_router
 from backend.api.users import router as users_router
+from backend.schemas import Metric, Alert
 
 app = FastAPI(title="CyberPulse API", version="1.0.0")
 
