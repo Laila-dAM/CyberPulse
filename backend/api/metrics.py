@@ -1,16 +1,24 @@
 from fastapi import APIRouter, Depends
 from typing import List
 from datetime import datetime
-from backend.models.metric import Metric
-from backend.schemas.metric import Metric as MetricSchema
-from backend.core.database import get_db_session
+from ..models.metric import Metric
+from ..schemas.metric import Metric as MetricSchema
+from ..core.database import get_db_session
 from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/metrics", tags=["Metrics"])
 
 @router.get("/test")
 def test_metrics():
-    return {"id": 1, "cpu": 55.5, "ram": 70.2, "disk": 80.1, "network": 120.5, "temperature": 65.3, "timestamp": datetime.utcnow()}
+    return {
+        "id": 1,
+        "cpu": 55.5,
+        "ram": 70.2,
+        "disk": 80.1,
+        "network": 120.5,
+        "temperature": 65.3,
+        "timestamp": datetime.utcnow()
+    }
 
 @router.get("/", response_model=List[MetricSchema])
 def get_all_metrics(skip: int = 0, limit: int = 100, db: Session = Depends(get_db_session)):

@@ -1,6 +1,6 @@
 import pytest
-from backend.services import database
-from backend.models import metric, alert
+from ..services import database
+from ..models import metric, alert
 
 def test_database_connection_sql():
     db = database.connect()

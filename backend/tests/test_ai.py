@@ -1,6 +1,6 @@
 import pytest
-from backend.services import analytics
-from backend.models import metric
+from ..services import analytics
+from ..models import metric
 
 def test_anomaly_detection_with_normal_data():
     sample_data = [

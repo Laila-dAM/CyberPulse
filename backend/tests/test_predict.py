@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from backend.main import app
+from ..main import app
 
 client = TestClient(app)
 
@@ -16,7 +16,7 @@ def test_predict_normal():
     )
     assert response.status_code == 200
     assert "anomaly" in response.json()
-    assert response.json()["anomaly"] == False
+    assert response.json()["anomaly"] is False
 
 def test_predict_anomaly():
     response = client.post(
@@ -30,4 +30,4 @@ def test_predict_anomaly():
         }
     )
     assert response.status_code == 200
-    assert response.json()["anomaly"] == True
+    assert response.json()["anomaly"] is True

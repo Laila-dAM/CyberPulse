@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from pydantic import ConfigDict
 
 class Alert(BaseModel):
     id: int
@@ -8,5 +9,4 @@ class Alert(BaseModel):
     severity: str
     created_at: datetime
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

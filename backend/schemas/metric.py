@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from pydantic import ConfigDict
 
 class Metric(BaseModel):
     id: int
@@ -10,5 +11,4 @@ class Metric(BaseModel):
     network: float
     temperature: float
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
