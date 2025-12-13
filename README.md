@@ -1,139 +1,91 @@
 <h1 align="center">C Y B E R P U L S E</h1>
 
-# CyberPulse
+## What is it
 
-CyberPulse is a full-stack monitoring and analytics system designed to collect system metrics, store them, analyze them, and present them through a futuristic cyber-style dashboard. It features a FastAPI backend, system metric collectors, a SQL-based database, and a fully customizable frontend interface.
+**CyberPulse** is a lightweight **system monitoring and analytics platform** that collects system metrics (CPU, memory, processes) and displays them in a **real-time visual dashboard**.
 
-------------------------------------------------------------
-## Key Features
+This project was built to demonstrate **backend development, API design, and basic observability concepts**.
 
+---
 
-- System metric collection through Bash scripts (CPU, RAM, disk, network, temperature, logs).
-- FastAPI backend with endpoints for metrics, alerts, predictions, and historical data.
-- SQL-based database (PostgreSQL, MySQL, SQLite or MongoDB depending on configuration).
-- Lightweight anomaly detection and trend prediction.
-- Frontend dashboard in a neon Y2K / cyber aesthetic with real-time charts.
-- Cloud deployment ready for AWS, Azure, GCP, Render, Railway, and others.
-- Token-based security, CORS configuration, and environment-based settings.
-- Internal documentation and automated tests.
+## Problem it solves
 
-------------------------------------------------------------
-## Tech Stack
+System monitoring tools are often complex and hard to understand for beginners.
 
-**Frontend:** HTML, CSS, JavaScript, Chart.js  
-**Backend:** Python, FastAPI  
-**Database:** PostgreSQL / MySQL / SQLite / MongoDB  
-**System Scripts:** Bash  
-**Deployment:** Any cloud provider or self-hosted  
-**Analytics:** Python (optional ML libraries)
+CyberPulse provides:
 
-------------------------------------------------------------
-## Project Structure
+* Centralized system metrics collection
+* A clean REST API to access metrics
+* A simple, visual dashboard for real-time monitoring
+* An educational base to learn **monitoring and system analysis**
 
-- /frontend - Dashboard UI, static files, scripts
-- /backend - FastAPI application, routes, schemas, services
-- /scripts - System metric collectors and utilities
-- /db - Database schemas, migrations, exports
-- /docs - Architecture diagrams, API documentation, installation notes
-- /art - ASCII art, mockups, visual assets
-- /tests - Unit tests, integration tests, load tests
+---
 
+## What this project demonstrates
 
-------------------------------------------------------------
-## Installation
+* REST API development with **FastAPI**
+* System metrics collection using **psutil**
+* Backend project organization and clean architecture
+* Environment configuration with `.env`
+* Automated testing with **pytest**
+* Basic dashboard integration
 
-1. Clone the repository:
-```python
-   git clone https://github.com/Laila-dAM/CyberPulse.git
+Suitable for **IT / Software Engineering internship** portfolios.
+
+---
+
+## Tech stack
+
+* Python
+* FastAPI
+* Uvicorn
+* Psutil
+* Pytest
+* HTML / CSS / JavaScript
+
+---
+
+## How to run (copy & paste)
+
+```bash
+git clone https://github.com/Laila-dAM/CyberPulse.git
+cd CyberPulse
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\\Scripts\\activate     # Windows
+pip install -r requirements.txt
+cp .env.example .env
+uvicorn app.main:app --reload
 ```
-2. Enter the project directory:
-```python
-   cd CyberPulse
+
+Access:
+
+* API: [http://localhost:8000](http://localhost:8000)
+* Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+* Dashboard: [http://localhost:8000/dashboard](http://localhost:8000/dashboard)
+
+---
+
+## Dashboard preview
+
+> Add screenshots or a short GIF of the dashboard running here
+
+---
+
+## Environment variables (`.env.example`)
+
+```env
+APP_ENV=development
+HOST=127.0.0.1
+PORT=8000
+LOG_LEVEL=info
 ```
-3. Create a virtual environment and install dependencies:
-```python
-   python -m venv venv  
-   source venv/bin/activate     (Windows: venv\Scripts\activate)  
-   pip install -r requirements.txt
-```
-4. Configure environment variables:
-```python
-   Copy from .env.example if available, then adjust the values (database URL, secret keys, etc.)
-```
-5. Initialize the database:
-```python
-   python create_db.py
-```
-6. Run the backend:
-```python
-   uvicorn backend.main:app --reload
-```
-7. Access the dashboard:
-```python
-   Open http://localhost:8000 in the browser.
-```
-------------------------------------------------------------
-## Usage
 
-- Use the Bash scripts in /scripts to collect metrics at defined intervals.
-- The backend exposes REST endpoints for real-time and historical data.
-- The dashboard displays charts, tables, alerts, and analytic results.
-- The system can be deployed locally or in cloud environments.
+---
 
-------------------------------------------------------------
-## API Summary
-
-Main endpoints include:
-
-- GET /metrics  
-- GET /metrics/latest  
-- GET /metrics/history  
-- GET /alerts  
-- GET /predict  
-
-API documentation is automatically generated at /docs and /openapi.json.
-
-------------------------------------------------------------
-## Testing
-
-The project provides unit tests and integration tests that can be executed with:
-```python
-   pytest
-```
-Load and performance tests may require additional tools depending on the environment.
-
-------------------------------------------------------------
-## Contributing
-
-Contributions are welcome.  
-Submit pull requests for improvements, new features, bug fixes, or documentation updates.
-
-------------------------------------------------------------
 ## License
 
-CyberPulse is distributed under the MIT License.  
-For more information, see the [LICENSE](./LICENSE) file.
+MIT License
 
-------------------------------------------------------------
-## Roadmap
-
-Planned or optional future enhancements:
-
-- Advanced anomaly detection models
-- Log ingestion from external applications or servers
-- Role-based access control and authentication system
-- Docker and Kubernetes deployment templates
-- Notifications triggered by alerts (email, webhook, Slack)
-- Responsive dashboard for mobile displays
-
-------------------------------------------------------------
-## Releases
-
-The latest stable version is **v1.0.0**.
-
-You can download it here:
-```python
-https://github.com/Laila-dAM/CyberPulse/releases
-```
 --- 
 <p align="center"> ૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ </p>
