@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts | CyberPulse</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/alerts.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img
+                    src="assets/logo/cyberpulse-logo.png"
+                    alt="CyberPulse Logo"
+                    class="sidebar-logo"
+                >
+
+                <h2 class="sidebar-title">
+                    CyberPulse
+                </h2>
+            </div>
+
+            <nav class="sidebar-navigation">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="index.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="metrics.html">
+                            Metrics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="network.html">
+                            Network
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="alerts.html"
+                            class="active"
+                        >
+                            Alerts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">
+                        System Alerts
+                    </h1>
+
+                    <p class="page-subtitle">
+                        Monitor critical events and infrastructure notifications
+                    </p>
+                </div>
+
+                <div class="page-actions">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                    >
+                        Clear Resolved
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                    >
+                        Refresh Alerts
+                    </button>
+                </div>
+            </header>
+
+            <section class="alerts-summary">
+                <div class="summary-card critical">
+                    <h3>
+                        Critical
+                    </h3>
+
+                    <span>
+                        3
+                    </span>
+                </div>
+
+                <div class="summary-card warning">
+                    <h3>
+                        Warning
+                    </h3>
+
+                    <span>
+                        7
+                    </span>
+                </div>
+
+                <div class="summary-card info">
+                    <h3>
+                        Information
+                    </h3>
+
+                    <span>
+                        12
+                    </span>
+                </div>
+
+                <div class="summary-card resolved">
+                    <h3>
+                        Resolved
+                    </h3>
+
+                    <span>
+                        24
+                    </span>
+                </div>
+            </section>
+
+            <section class="alerts-filters">
+                <div class="filter-group">
+                    <label for="severity-filter">
+                        Severity
+                    </label>
+
+                    <select id="severity-filter">
+                        <option>
+                            All Levels
+                        </option>
+
+                        <option>
+                            Critical
+                        </option>
+
+                        <option>
+                            Warning
+                        </option>
+
+                        <option>
+                            Information
+                        </option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="status-filter">
+                        Status
+                    </label>
+
+                    <select id="status-filter">
+                        <option>
+                            All Statuses
+                        </option>
+
+                        <option>
+                            Active
+                        </option>
+
+                        <option>
+                            Resolved
+                        </option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="alerts-list">
+                <article class="alert-item critical">
+                    <div class="alert-item-header">
+                        <div>
+                            <h3 class="alert-title">
+                                High CPU Usage Detected
+                            </h3>
+
+                            <p class="alert-category">
+                                Infrastructure Monitoring
+                            </p>
+                        </div>
+
+                        <span class="alert-severity">
+                            Critical
+                        </span>
+                    </div>
+
+                    <p class="alert-description">
+                        CPU utilization exceeded the configured threshold and reached 94%.
+                    </p>
+
+                    <div class="alert-details">
+                        <span>
+                            Server: Production-01
+                        </span>
+
+                        <span>
+                            Time: 2 Minutes Ago
+                        </span>
+
+                        <span>
+                            Status: Active
+                        </span>
+                    </div>
+
+                    <div class="alert-actions">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            Ignore
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                        >
+                            Resolve
+                        </button>
+                    </div>
+                </article>
+
+                <article class="alert-item warning">
+                    <div class="alert-item-header">
+                        <div>
+                            <h3 class="alert-title">
+                                Memory Usage Warning
+                            </h3>
+
+                            <p class="alert-category">
+                                Resource Monitoring
+                            </p>
+                        </div>
+
+                        <span class="alert-severity">
+                            Warning
+                        </span>
+                    </div>
+
+                    <p class="alert-description">
+                        Memory consumption reached 82% of available resources.
+                    </p>
+
+                    <div class="alert-details">
+                        <span>
+                            Server: Backend-API
+                        </span>
+
+                        <span>
+                            Time: 10 Minutes Ago
+                        </span>
+
+                        <span>
+                            Status: Active
+                        </span>
+                    </div>
+
+                    <div class="alert-actions">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            Ignore
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                        >
+                            Resolve
+                        </button>
+                    </div>
+                </article>
+
+                <article class="alert-item info">
+                    <div class="alert-item-header">
+                        <div>
+                            <h3 class="alert-title">
+                                Scheduled Backup Completed
+                            </h3>
+
+                            <p class="alert-category">
+                                System Event
+                            </p>
+                        </div>
+
+                        <span class="alert-severity">
+                            Information
+                        </span>
+                    </div>
+
+                    <p class="alert-description">
+                        Daily backup process completed successfully without errors.
+                    </p>
+
+                    <div class="alert-details">
+                        <span>
+                            Server: Database-01
+                        </span>
+
+                        <span>
+                            Time: 1 Hour Ago
+                        </span>
+
+                        <span>
+                            Status: Resolved
+                        </span>
+                    </div>
+
+                    <div class="alert-actions">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            View Details
+                        </button>
+                    </div>
+                </article>
+            </section>
+
+            <footer class="page-footer">
+                <p>
+                    © 2026 CyberPulse. All Rights Reserved.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/alerts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

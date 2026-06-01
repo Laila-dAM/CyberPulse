@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | CyberPulse</title>
+
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/cards.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+<div class="app-layout">
+
+<aside class="sidebar">
+<div class="sidebar-header">
+<img src="../assets/logo/cyberpulse-logo.png" alt="CyberPulse Logo" class="sidebar-logo">
+<h2 class="sidebar-title">CyberPulse</h2>
+</div>
+
+<nav class="sidebar-navigation">
+<ul class="sidebar-menu">
+<li><a href="../index.html">Dashboard</a></li>
+<li><a href="metrics.html">Metrics</a></li>
+<li><a href="alerts.html">Alerts</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="login.html">Logout</a></li>
+</ul>
+</nav>
+</aside>
+
+<main class="main-content">
+
+<header class="page-header">
+<div>
+<h1 class="page-title">Dashboard</h1>
+<p class="page-subtitle">Real-time system overview and performance insights</p>
+</div>
+
+<div class="page-actions">
+<button class="btn btn-secondary">Refresh</button>
+<button class="btn btn-primary">Export</button>
+</div>
+</header>
+
+<section class="dashboard-grid">
+
+<div class="card">
+<h3>Total Uptime</h3>
+<div class="card-value">99.98%</div>
+<p class="card-description">System availability</p>
+</div>
+
+<div class="card">
+<h3>Active Servers</h3>
+<div class="card-value">24</div>
+<p class="card-description">Running instances</p>
+</div>
+
+<div class="card">
+<h3>Active Alerts</h3>
+<div class="card-value">3</div>
+<p class="card-description">Require attention</p>
+</div>
+
+<div class="card">
+<h3>Network Load</h3>
+<div class="card-value">68%</div>
+<p class="card-description">Current traffic usage</p>
+</div>
+
+</section>
+
+<section class="dashboard-content">
+
+<div class="card large">
+<h3>System Overview</h3>
+<canvas id="overview-chart"></canvas>
+</div>
+
+<div class="card large">
+<h3>Live Activity</h3>
+<div class="activity-feed">
+
+<div class="activity-item">
+<span class="status-dot green"></span>
+<span>Server API-01 is running normally</span>
+</div>
+
+<div class="activity-item">
+<span class="status-dot yellow"></span>
+<span>Memory usage above 80% on DB-02</span>
+</div>
+
+<div class="activity-item">
+<span class="status-dot red"></span>
+<span>High CPU detected on PROD-03</span>
+</div>
+
+<div class="activity-item">
+<span class="status-dot green"></span>
+<span>Backup completed successfully</span>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section class="dashboard-bottom">
+
+<div class="card">
+<h3>Quick Actions</h3>
+<button class="btn btn-primary">Run Diagnostics</button>
+<button class="btn btn-secondary">Restart Services</button>
+<button class="btn btn-secondary">View Logs</button>
+</div>
+
+<div class="card">
+<h3>System Status</h3>
+<ul class="status-list">
+<li>Database: Online</li>
+<li>API: Stable</li>
+<li>Auth Service: Online</li>
+<li>Storage: Healthy</li>
+</ul>
+</div>
+
+</section>
+
+<footer class="page-footer">
+<p>© 2026 CyberPulse. All Rights Reserved.</p>
+</footer>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/charts.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

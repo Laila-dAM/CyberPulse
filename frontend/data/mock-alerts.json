@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-06-01T15:00:00Z",
+  "summary": {
+    "critical": 3,
+    "warning": 7,
+    "info": 12,
+    "resolved": 24
+  },
+  "alerts": [
+    {
+      "id": "alt-001",
+      "title": "High CPU Usage Detected",
+      "category": "Infrastructure Monitoring",
+      "severity": "critical",
+      "message": "CPU utilization exceeded the configured threshold and reached 94%.",
+      "server": "Production-01",
+      "status": "active",
+      "timestamp": "2026-06-01T14:58:00Z"
+    },
+    {
+      "id": "alt-002",
+      "title": "Memory Usage Warning",
+      "category": "Resource Monitoring",
+      "severity": "warning",
+      "message": "Memory consumption reached 82% of available resources.",
+      "server": "Backend-API",
+      "status": "active",
+      "timestamp": "2026-06-01T14:50:00Z"
+    },
+    {
+      "id": "alt-003",
+      "title": "Disk Space Near Capacity",
+      "category": "Storage Monitoring",
+      "severity": "warning",
+      "message": "Disk usage reached 90% on Database-01.",
+      "server": "Database-01",
+      "status": "active",
+      "timestamp": "2026-06-01T14:40:00Z"
+    },
+    {
+      "id": "alt-004",
+      "title": "Scheduled Backup Completed",
+      "category": "System Event",
+      "severity": "info",
+      "message": "Daily backup completed successfully without errors.",
+      "server": "Database-01",
+      "status": "resolved",
+      "timestamp": "2026-06-01T13:00:00Z"
+    },
+    {
+      "id": "alt-005",
+      "title": "Network Latency Increase",
+      "category": "Network Monitoring",
+      "severity": "warning",
+      "message": "Increased latency detected in external requests.",
+      "server": "API-Gateway",
+      "status": "active",
+      "timestamp": "2026-06-01T14:30:00Z"
+    },
+    {
+      "id": "alt-006",
+      "title": "Authentication Service Restarted",
+      "category": "System Event",
+      "severity": "info",
+      "message": "Auth service restarted successfully after update.",
+      "server": "Auth-Service",
+      "status": "resolved",
+      "timestamp": "2026-06-01T12:20:00Z"
+    },
+    {
+      "id": "alt-007",
+      "title": "High Network Traffic",
+      "category": "Network Monitoring",
+      "severity": "critical",
+      "message": "Network traffic exceeded safe threshold at 240 Mbps.",
+      "server": "Production-01",
+      "status": "active",
+      "timestamp": "2026-06-01T14:10:00Z"
+    },
+    {
+      "id": "alt-008",
+      "title": "Database Connection Spike",
+      "category": "Database Monitoring",
+      "severity": "warning",
+      "message": "Unusual spike in database connections detected.",
+      "server": "Database-01",
+      "status": "active",
+      "timestamp": "2026-06-01T14:05:00Z"
+    }
+  ]
+}

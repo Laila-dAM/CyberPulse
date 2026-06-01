@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | CyberPulse</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img
+                    src="assets/logo/cyberpulse-logo.png"
+                    alt="CyberPulse Logo"
+                    class="sidebar-logo"
+                >
+
+                <h2 class="sidebar-title">
+                    CyberPulse
+                </h2>
+            </div>
+
+            <nav class="sidebar-navigation">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="index.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="metrics.html">
+                            Metrics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="network.html">
+                            Network
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="alerts.html">
+                            Alerts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="settings.html"
+                            class="active"
+                        >
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">
+                        Settings
+                    </h1>
+
+                    <p class="page-subtitle">
+                        Configure your CyberPulse environment
+                    </p>
+                </div>
+            </header>
+
+            <section class="settings-section">
+                <div class="settings-card">
+                    <h2 class="settings-card-title">
+                        Account Settings
+                    </h2>
+
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label
+                                for="full-name"
+                                class="form-label"
+                            >
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="full-name"
+                                class="form-input"
+                                value="Administrator"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="email"
+                                class="form-label"
+                            >
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-input"
+                                value="admin@cyberpulse.com"
+                            >
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Changes
+                        </button>
+                    </form>
+                </div>
+
+                <div class="settings-card">
+                    <h2 class="settings-card-title">
+                        Security Settings
+                    </h2>
+
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label
+                                for="current-password"
+                                class="form-label"
+                            >
+                                Current Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="current-password"
+                                class="form-input"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="new-password"
+                                class="form-label"
+                            >
+                                New Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="new-password"
+                                class="form-input"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="confirm-password"
+                                class="form-label"
+                            >
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                class="form-input"
+                            >
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Update Password
+                        </button>
+                    </form>
+                </div>
+
+                <div class="settings-card">
+                    <h2 class="settings-card-title">
+                        Notification Settings
+                    </h2>
+
+                    <div class="settings-options">
+                        <label class="settings-option">
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span>
+                                Email Notifications
+                            </span>
+                        </label>
+
+                        <label class="settings-option">
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span>
+                                Critical Alerts
+                            </span>
+                        </label>
+
+                        <label class="settings-option">
+                            <input
+                                type="checkbox"
+                            >
+
+                            <span>
+                                Weekly Reports
+                            </span>
+                        </label>
+
+                        <label class="settings-option">
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span>
+                                System Health Updates
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2 class="settings-card-title">
+                        Monitoring Configuration
+                    </h2>
+
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label
+                                for="cpu-threshold"
+                                class="form-label"
+                            >
+                                CPU Alert Threshold
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cpu-threshold"
+                                class="form-input"
+                                value="80"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="memory-threshold"
+                                class="form-label"
+                            >
+                                Memory Alert Threshold
+                            </label>
+
+                            <input
+                                type="number"
+                                id="memory-threshold"
+                                class="form-input"
+                                value="85"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="disk-threshold"
+                                class="form-label"
+                            >
+                                Disk Alert Threshold
+                            </label>
+
+                            <input
+                                type="number"
+                                id="disk-threshold"
+                                class="form-input"
+                                value="90"
+                            >
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Monitoring Rules
+                        </button>
+                    </form>
+                </div>
+
+                <div class="settings-card">
+                    <h2 class="settings-card-title">
+                        Appearance
+                    </h2>
+
+                    <div class="settings-options">
+                        <label class="settings-option">
+                            <input
+                                type="radio"
+                                name="theme"
+                                checked
+                            >
+
+                            <span>
+                                Dark Theme
+                            </span>
+                        </label>
+
+                        <label class="settings-option">
+                            <input
+                                type="radio"
+                                name="theme"
+                            >
+
+                            <span>
+                                Light Theme
+                            </span>
+                        </label>
+
+                        <label class="settings-option">
+                            <input
+                                type="radio"
+                                name="theme"
+                            >
+
+                            <span>
+                                System Theme
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <p>
+                    © 2026 CyberPulse. All Rights Reserved.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

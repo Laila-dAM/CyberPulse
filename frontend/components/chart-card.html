@@ -1,0 +1,113 @@
+<div class="chart-card">
+
+    <div class="chart-card-header">
+
+        <div class="chart-card-info">
+
+            <h3 class="chart-card-title">
+                CPU Usage
+            </h3>
+
+            <p class="chart-card-subtitle">
+                Real-Time Performance Monitoring
+            </p>
+
+        </div>
+
+        <div class="chart-card-actions">
+
+            <button type="button" class="chart-action-button refresh-chart">
+                Refresh
+            </button>
+
+            <button type="button" class="chart-action-button export-chart">
+                Export
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="chart-card-body">
+
+        <canvas id="cpu-chart" class="chart-canvas"></canvas>
+
+    </div>
+
+    <div class="chart-card-footer">
+
+        <div class="chart-stat">
+            <span class="chart-stat-label">Current</span>
+            <span class="chart-stat-value current-value">42%</span>
+        </div>
+
+        <div class="chart-stat">
+            <span class="chart-stat-label">Average</span>
+            <span class="chart-stat-value average-value">38%</span>
+        </div>
+
+        <div class="chart-stat">
+            <span class="chart-stat-label">Peak</span>
+            <span class="chart-stat-value peak-value">74%</span>
+        </div>
+
+    </div>
+
+</div>
+
+<template id="chart-card-template">
+
+    <div class="chart-card">
+
+        <div class="chart-card-header">
+
+            <div class="chart-card-info">
+
+                <h3 class="chart-card-title"></h3>
+
+                <p class="chart-card-subtitle"></p>
+
+            </div>
+
+            <div class="chart-card-actions">
+
+                <button type="button" class="chart-action-button refresh-chart">
+                    Refresh
+                </button>
+
+                <button type="button" class="chart-action-button export-chart">
+                    Export
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="chart-card-body">
+
+            <canvas class="chart-canvas"></canvas>
+
+        </div>
+
+        <div class="chart-card-footer">
+
+            <div class="chart-stat">
+                <span class="chart-stat-label">Current</span>
+                <span class="chart-stat-value current-value"></span>
+            </div>
+
+            <div class="chart-stat">
+                <span class="chart-stat-label">Average</span>
+                <span class="chart-stat-value average-value"></span>
+            </div>
+
+            <div class="chart-stat">
+                <span class="chart-stat-label">Peak</span>
+                <span class="chart-stat-value peak-value"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</template>

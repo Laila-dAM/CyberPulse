@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-06-01T15:00:00Z",
+  "users": [
+    {
+      "id": "usr-001",
+      "name": "Administrator",
+      "email": "admin@cyberpulse.com",
+      "role": "admin",
+      "status": "active",
+      "last_login": "2026-06-01T14:45:00Z",
+      "permissions": [
+        "read",
+        "write",
+        "delete",
+        "manage_users",
+        "manage_system"
+      ]
+    },
+    {
+      "id": "usr-002",
+      "name": "System Analyst",
+      "email": "analyst@cyberpulse.com",
+      "role": "analyst",
+      "status": "active",
+      "last_login": "2026-06-01T13:20:00Z",
+      "permissions": [
+        "read",
+        "write",
+        "view_metrics",
+        "view_alerts"
+      ]
+    },
+    {
+      "id": "usr-003",
+      "name": "Network Engineer",
+      "email": "network@cyberpulse.com",
+      "role": "engineer",
+      "status": "active",
+      "last_login": "2026-06-01T12:10:00Z",
+      "permissions": [
+        "read",
+        "view_network",
+        "manage_network",
+        "view_metrics"
+      ]
+    },
+    {
+      "id": "usr-004",
+      "name": "Security Operator",
+      "email": "security@cyberpulse.com",
+      "role": "security",
+      "status": "inactive",
+      "last_login": "2026-05-30T18:00:00Z",
+      "permissions": [
+        "read",
+        "view_alerts",
+        "resolve_alerts"
+      ]
+    },
+    {
+      "id": "usr-005",
+      "name": "Guest User",
+      "email": "guest@cyberpulse.com",
+      "role": "guest",
+      "status": "active",
+      "last_login": "2026-06-01T10:00:00Z",
+      "permissions": [
+        "read"
+      ]
+    }
+  ]
+}

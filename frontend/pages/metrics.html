@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrics | CyberPulse</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img
+                    src="assets/logo/cyberpulse-logo.png"
+                    alt="CyberPulse Logo"
+                    class="sidebar-logo"
+                >
+
+                <h2 class="sidebar-title">
+                    CyberPulse
+                </h2>
+            </div>
+
+            <nav class="sidebar-navigation">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="index.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="metrics.html"
+                            class="active"
+                        >
+                            Metrics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="network.html">
+                            Network
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="alerts.html">
+                            Alerts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">
+                            Settings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">
+                        System Metrics
+                    </h1>
+
+                    <p class="page-subtitle">
+                        Real-time infrastructure performance monitoring
+                    </p>
+                </div>
+
+                <div class="page-actions">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                    >
+                        Export Report
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                    >
+                        Refresh Data
+                    </button>
+                </div>
+            </header>
+
+            <section class="metrics-overview">
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <img
+                            src="assets/icons/cpu.svg"
+                            alt="CPU"
+                            class="metric-icon"
+                        >
+
+                        <span class="metric-status healthy">
+                            Healthy
+                        </span>
+                    </div>
+
+                    <h3 class="metric-title">
+                        CPU Usage
+                    </h3>
+
+                    <div class="metric-value">
+                        42%
+                    </div>
+
+                    <p class="metric-description">
+                        Current processor utilization
+                    </p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <img
+                            src="assets/icons/memory.svg"
+                            alt="Memory"
+                            class="metric-icon"
+                        >
+
+                        <span class="metric-status warning">
+                            Moderate
+                        </span>
+                    </div>
+
+                    <h3 class="metric-title">
+                        Memory Usage
+                    </h3>
+
+                    <div class="metric-value">
+                        68%
+                    </div>
+
+                    <p class="metric-description">
+                        Active memory consumption
+                    </p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <img
+                            src="assets/icons/disk.svg"
+                            alt="Disk"
+                            class="metric-icon"
+                        >
+
+                        <span class="metric-status healthy">
+                            Stable
+                        </span>
+                    </div>
+
+                    <h3 class="metric-title">
+                        Disk Usage
+                    </h3>
+
+                    <div class="metric-value">
+                        57%
+                    </div>
+
+                    <p class="metric-description">
+                        Storage allocation status
+                    </p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <img
+                            src="assets/icons/network.svg"
+                            alt="Network"
+                            class="metric-icon"
+                        >
+
+                        <span class="metric-status healthy">
+                            Online
+                        </span>
+                    </div>
+
+                    <h3 class="metric-title">
+                        Network Traffic
+                    </h3>
+
+                    <div class="metric-value">
+                        128 Mbps
+                    </div>
+
+                    <p class="metric-description">
+                        Current network throughput
+                    </p>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>
+                            CPU Performance Trend
+                        </h2>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="cpu-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>
+                            Memory Utilization Trend
+                        </h2>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="memory-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>
+                            Disk Activity
+                        </h2>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="disk-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>
+                            Network Performance
+                        </h2>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="network-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <div class="table-card">
+                    <div class="table-card-header">
+                        <h2>
+                            Running Processes
+                        </h2>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Process
+                                    </th>
+
+                                    <th>
+                                        CPU
+                                    </th>
+
+                                    <th>
+                                        Memory
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Python Service
+                                    </td>
+
+                                    <td>
+                                        14%
+                                    </td>
+
+                                    <td>
+                                        512 MB
+                                    </td>
+
+                                    <td>
+                                        Running
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Database Engine
+                                    </td>
+
+                                    <td>
+                                        8%
+                                    </td>
+
+                                    <td>
+                                        768 MB
+                                    </td>
+
+                                    <td>
+                                        Running
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        API Gateway
+                                    </td>
+
+                                    <td>
+                                        5%
+                                    </td>
+
+                                    <td>
+                                        256 MB
+                                    </td>
+
+                                    <td>
+                                        Running
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Monitoring Agent
+                                    </td>
+
+                                    <td>
+                                        2%
+                                    </td>
+
+                                    <td>
+                                        128 MB
+                                    </td>
+
+                                    <td>
+                                        Running
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <p>
+                    © 2026 CyberPulse. All Rights Reserved.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/metrics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
