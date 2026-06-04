@@ -1,76 +1,65 @@
 {
   "system": {
-    "timestamp": "2026-06-01T15:00:00Z",
-    "status": "operational"
+    "name": "CyberPulse Node",
+    "status": "online",
+    "timestamp": "2026-06-04T12:00:00Z"
   },
   "metrics": {
     "cpu": {
-      "current": 42,
-      "average": 38,
-      "max": 94,
-      "min": 12,
-      "unit": "%"
+      "usage": 42,
+      "cores": 8,
+      "temperature": 61,
+      "load_average": [0.42, 0.38, 0.35]
     },
     "memory": {
-      "current": 68,
-      "average": 64,
-      "max": 91,
-      "min": 30,
-      "unit": "%"
+      "total": 16384,
+      "used": 11264,
+      "free": 5120,
+      "usage": 68
     },
     "disk": {
-      "current": 57,
-      "average": 55,
-      "max": 80,
-      "min": 40,
-      "unit": "%"
+      "total": 512000,
+      "used": 291840,
+      "free": 220160,
+      "usage": 57
     },
     "network": {
-      "current": 128,
-      "average": 110,
-      "max": 240,
-      "min": 60,
-      "unit": "Mbps"
+      "download": 128,
+      "upload": 64,
+      "latency": 12,
+      "packets_lost": 0
+    },
+    "processes": [
+      {
+        "name": "python-service",
+        "cpu": 14,
+        "memory": 512,
+        "status": "running"
+      },
+      {
+        "name": "database-engine",
+        "cpu": 8,
+        "memory": 768,
+        "status": "running"
+      },
+      {
+        "name": "api-gateway",
+        "cpu": 5,
+        "memory": 256,
+        "status": "running"
+      },
+      {
+        "name": "monitoring-agent",
+        "cpu": 2,
+        "memory": 128,
+        "status": "running"
+      }
+    ],
+    "history": {
+      "cpu_usage": [35, 38, 40, 42, 39, 41, 44],
+      "memory_usage": [60, 62, 65, 67, 68, 70, 68],
+      "disk_usage": [55, 56, 56, 57, 57, 57, 57],
+      "network_usage": [100, 110, 120, 130, 125, 128, 128]
     }
-  },
-  "servers": [
-    {
-      "id": "srv-01",
-      "name": "Production-01",
-      "cpu": 74,
-      "memory": 82,
-      "disk": 61,
-      "status": "warning"
-    },
-    {
-      "id": "srv-02",
-      "name": "Backend-API",
-      "cpu": 38,
-      "memory": 55,
-      "disk": 49,
-      "status": "healthy"
-    },
-    {
-      "id": "srv-03",
-      "name": "Database-01",
-      "cpu": 62,
-      "memory": 71,
-      "disk": 83,
-      "status": "warning"
-    },
-    {
-      "id": "srv-04",
-      "name": "Auth-Service",
-      "cpu": 21,
-      "memory": 34,
-      "disk": 40,
-      "status": "healthy"
-    }
-  ],
-  "history": {
-    "cpu": [20, 25, 30, 28, 35, 40, 42],
-    "memory": [50, 55, 60, 62, 65, 68, 70],
-    "disk": [45, 46, 48, 50, 52, 55, 57],
-    "network": [80, 90, 100, 110, 105, 120, 128]
   }
 }

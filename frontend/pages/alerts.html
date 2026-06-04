@@ -2,23 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Alerts | CyberPulse</title>
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/alerts.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link
+        rel="icon"
+        href="../assets/logo/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/alerts.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
 </head>
 <body>
     <div class="app-layout">
         <aside class="sidebar">
             <div class="sidebar-header">
                 <img
-                    src="assets/logo/cyberpulse-logo.png"
+                    src="../assets/logo/cyberpulse-logo.png"
                     alt="CyberPulse Logo"
                     class="sidebar-logo"
                 >
@@ -31,7 +73,7 @@
             <nav class="sidebar-navigation">
                 <ul class="sidebar-menu">
                     <li>
-                        <a href="index.html">
+                        <a href="dashboard.html">
                             Dashboard
                         </a>
                     </li>
@@ -39,12 +81,6 @@
                     <li>
                         <a href="metrics.html">
                             Metrics
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="network.html">
-                            Network
                         </a>
                     </li>
 
@@ -62,6 +98,12 @@
                             Settings
                         </a>
                     </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -70,11 +112,11 @@
             <header class="page-header">
                 <div>
                     <h1 class="page-title">
-                        System Alerts
+                        Alert Center
                     </h1>
 
                     <p class="page-subtitle">
-                        Monitor critical events and infrastructure notifications
+                        Monitor incidents, warnings and infrastructure events
                     </p>
                 </div>
 
@@ -97,42 +139,42 @@
 
             <section class="alerts-summary">
                 <div class="summary-card critical">
-                    <h3>
-                        Critical
-                    </h3>
-
-                    <span>
+                    <span class="summary-value">
                         3
+                    </span>
+
+                    <span class="summary-label">
+                        Critical
                     </span>
                 </div>
 
                 <div class="summary-card warning">
-                    <h3>
-                        Warning
-                    </h3>
-
-                    <span>
+                    <span class="summary-value">
                         7
+                    </span>
+
+                    <span class="summary-label">
+                        Warning
                     </span>
                 </div>
 
                 <div class="summary-card info">
-                    <h3>
-                        Information
-                    </h3>
-
-                    <span>
+                    <span class="summary-value">
                         12
+                    </span>
+
+                    <span class="summary-label">
+                        Information
                     </span>
                 </div>
 
                 <div class="summary-card resolved">
-                    <h3>
-                        Resolved
-                    </h3>
-
-                    <span>
+                    <span class="summary-value">
                         24
+                    </span>
+
+                    <span class="summary-label">
+                        Resolved
                     </span>
                 </div>
             </section>
@@ -180,6 +222,18 @@
                             Resolved
                         </option>
                     </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="search-alerts">
+                        Search
+                    </label>
+
+                    <input
+                        type="text"
+                        id="search-alerts"
+                        placeholder="Search alerts"
+                    >
                 </div>
             </section>
 
@@ -332,6 +386,58 @@
                         </button>
                     </div>
                 </article>
+
+                <article class="alert-item critical">
+                    <div class="alert-item-header">
+                        <div>
+                            <h3 class="alert-title">
+                                Network Latency Spike
+                            </h3>
+
+                            <p class="alert-category">
+                                Network Monitoring
+                            </p>
+                        </div>
+
+                        <span class="alert-severity">
+                            Critical
+                        </span>
+                    </div>
+
+                    <p class="alert-description">
+                        Latency increased above acceptable limits affecting service response time.
+                    </p>
+
+                    <div class="alert-details">
+                        <span>
+                            Region: South America
+                        </span>
+
+                        <span>
+                            Time: 25 Minutes Ago
+                        </span>
+
+                        <span>
+                            Status: Active
+                        </span>
+                    </div>
+
+                    <div class="alert-actions">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            Ignore
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                        >
+                            Resolve
+                        </button>
+                    </div>
+                </article>
             </section>
 
             <footer class="page-footer">
@@ -342,7 +448,14 @@
         </main>
     </div>
 
-    <script src="js/alerts.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/state.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/alerts.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

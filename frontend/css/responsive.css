@@ -1,0 +1,169 @@
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .layout {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-title,
+    .sidebar-menu a span {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .dashboard-header,
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: var(--spacing-md);
+    }
+
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    .metric-value {
+        font-size: 1.5rem;
+    }
+
+    .chart-card {
+        padding: var(--spacing-md);
+    }
+
+    .login-card {
+        padding: var(--spacing-lg);
+    }
+
+    .login-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: var(--spacing-sm);
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--color-background-dark);
+        color: var(--color-text-dark);
+    }
+
+    .card,
+    .sidebar,
+    .navbar {
+        background: var(--color-surface-dark);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

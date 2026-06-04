@@ -1,91 +1,89 @@
 {
-  "generated_at": "2026-06-01T15:00:00Z",
-  "summary": {
-    "critical": 3,
-    "warning": 7,
-    "info": 12,
-    "resolved": 24
-  },
   "alerts": [
     {
-      "id": "alt-001",
+      "id": "alt-1001",
       "title": "High CPU Usage Detected",
-      "category": "Infrastructure Monitoring",
+      "description": "CPU utilization exceeded the configured threshold and reached 94%.",
+      "category": "infrastructure",
       "severity": "critical",
-      "message": "CPU utilization exceeded the configured threshold and reached 94%.",
-      "server": "Production-01",
       "status": "active",
-      "timestamp": "2026-06-01T14:58:00Z"
+      "server": "production-01",
+      "metric": "cpu",
+      "value": 94,
+      "threshold": 80,
+      "timestamp": "2026-06-04T11:58:00Z"
     },
     {
-      "id": "alt-002",
+      "id": "alt-1002",
       "title": "Memory Usage Warning",
-      "category": "Resource Monitoring",
+      "description": "Memory consumption reached 82% of available resources.",
+      "category": "resource",
       "severity": "warning",
-      "message": "Memory consumption reached 82% of available resources.",
-      "server": "Backend-API",
       "status": "active",
-      "timestamp": "2026-06-01T14:50:00Z"
+      "server": "backend-api",
+      "metric": "memory",
+      "value": 82,
+      "threshold": 85,
+      "timestamp": "2026-06-04T11:45:00Z"
     },
     {
-      "id": "alt-003",
-      "title": "Disk Space Near Capacity",
-      "category": "Storage Monitoring",
-      "severity": "warning",
-      "message": "Disk usage reached 90% on Database-01.",
-      "server": "Database-01",
-      "status": "active",
-      "timestamp": "2026-06-01T14:40:00Z"
-    },
-    {
-      "id": "alt-004",
-      "title": "Scheduled Backup Completed",
-      "category": "System Event",
-      "severity": "info",
-      "message": "Daily backup completed successfully without errors.",
-      "server": "Database-01",
-      "status": "resolved",
-      "timestamp": "2026-06-01T13:00:00Z"
-    },
-    {
-      "id": "alt-005",
-      "title": "Network Latency Increase",
-      "category": "Network Monitoring",
-      "severity": "warning",
-      "message": "Increased latency detected in external requests.",
-      "server": "API-Gateway",
-      "status": "active",
-      "timestamp": "2026-06-01T14:30:00Z"
-    },
-    {
-      "id": "alt-006",
-      "title": "Authentication Service Restarted",
-      "category": "System Event",
-      "severity": "info",
-      "message": "Auth service restarted successfully after update.",
-      "server": "Auth-Service",
-      "status": "resolved",
-      "timestamp": "2026-06-01T12:20:00Z"
-    },
-    {
-      "id": "alt-007",
-      "title": "High Network Traffic",
-      "category": "Network Monitoring",
+      "id": "alt-1003",
+      "title": "Disk Space Running Low",
+      "description": "Disk usage is approaching critical limits at 91%.",
+      "category": "storage",
       "severity": "critical",
-      "message": "Network traffic exceeded safe threshold at 240 Mbps.",
-      "server": "Production-01",
       "status": "active",
-      "timestamp": "2026-06-01T14:10:00Z"
+      "server": "storage-node-03",
+      "metric": "disk",
+      "value": 91,
+      "threshold": 90,
+      "timestamp": "2026-06-04T11:30:00Z"
     },
     {
-      "id": "alt-008",
-      "title": "Database Connection Spike",
-      "category": "Database Monitoring",
+      "id": "alt-1004",
+      "title": "Network Latency Increase",
+      "description": "Network latency increased above normal levels.",
+      "category": "network",
       "severity": "warning",
-      "message": "Unusual spike in database connections detected.",
-      "server": "Database-01",
       "status": "active",
-      "timestamp": "2026-06-01T14:05:00Z"
+      "server": "gateway-01",
+      "metric": "latency",
+      "value": 180,
+      "threshold": 120,
+      "timestamp": "2026-06-04T11:20:00Z"
+    },
+    {
+      "id": "alt-1005",
+      "title": "Scheduled Backup Completed",
+      "description": "Daily backup process completed successfully without errors.",
+      "category": "system",
+      "severity": "info",
+      "status": "resolved",
+      "server": "database-01",
+      "metric": "backup",
+      "value": 100,
+      "threshold": 100,
+      "timestamp": "2026-06-04T10:00:00Z"
+    },
+    {
+      "id": "alt-1006",
+      "title": "Service Restarted Automatically",
+      "description": "Monitoring agent restarted due to memory optimization routine.",
+      "category": "system",
+      "severity": "info",
+      "status": "resolved",
+      "server": "monitoring-node-02",
+      "metric": "service",
+      "value": 1,
+      "threshold": 1,
+      "timestamp": "2026-06-04T09:40:00Z"
     }
-  ]
+  ],
+  "summary": {
+    "critical": 2,
+    "warning": 2,
+    "info": 2,
+    "active": 4,
+    "resolved": 2
+  }
 }

@@ -2,24 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Metrics | CyberPulse</title>
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/charts.css">
-    <link rel="stylesheet" href="css/tables.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link
+        rel="icon"
+        href="../assets/logo/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/charts.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/tables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
 </head>
 <body>
     <div class="app-layout">
         <aside class="sidebar">
             <div class="sidebar-header">
                 <img
-                    src="assets/logo/cyberpulse-logo.png"
+                    src="../assets/logo/cyberpulse-logo.png"
                     alt="CyberPulse Logo"
                     class="sidebar-logo"
                 >
@@ -32,7 +83,7 @@
             <nav class="sidebar-navigation">
                 <ul class="sidebar-menu">
                     <li>
-                        <a href="index.html">
+                        <a href="dashboard.html">
                             Dashboard
                         </a>
                     </li>
@@ -43,12 +94,6 @@
                             class="active"
                         >
                             Metrics
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="network.html">
-                            Network
                         </a>
                     </li>
 
@@ -81,7 +126,7 @@
                     </h1>
 
                     <p class="page-subtitle">
-                        Real-time infrastructure performance monitoring
+                        Infrastructure performance analytics and monitoring
                     </p>
                 </div>
 
@@ -97,7 +142,7 @@
                         type="button"
                         class="btn btn-primary"
                     >
-                        Refresh Data
+                        Refresh Metrics
                     </button>
                 </div>
             </header>
@@ -105,157 +150,205 @@
             <section class="metrics-overview">
                 <div class="metric-card">
                     <div class="metric-card-header">
-                        <img
-                            src="assets/icons/cpu.svg"
-                            alt="CPU"
-                            class="metric-icon"
-                        >
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/cpu.svg"
+                                alt="CPU"
+                            >
+                        </div>
 
-                        <span class="metric-status healthy">
-                            Healthy
-                        </span>
+                        <div class="metric-card-trend positive">
+                            +4.8%
+                        </div>
                     </div>
 
-                    <h3 class="metric-title">
-                        CPU Usage
-                    </h3>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            CPU Usage
+                        </h3>
 
-                    <div class="metric-value">
-                        42%
+                        <div class="metric-card-value">
+                            42%
+                        </div>
+
+                        <p class="metric-card-description">
+                            Processor utilization rate
+                        </p>
                     </div>
-
-                    <p class="metric-description">
-                        Current processor utilization
-                    </p>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-card-header">
-                        <img
-                            src="assets/icons/memory.svg"
-                            alt="Memory"
-                            class="metric-icon"
-                        >
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/memory.svg"
+                                alt="Memory"
+                            >
+                        </div>
 
-                        <span class="metric-status warning">
-                            Moderate
-                        </span>
+                        <div class="metric-card-trend positive">
+                            +2.3%
+                        </div>
                     </div>
 
-                    <h3 class="metric-title">
-                        Memory Usage
-                    </h3>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            Memory Usage
+                        </h3>
 
-                    <div class="metric-value">
-                        68%
+                        <div class="metric-card-value">
+                            68%
+                        </div>
+
+                        <p class="metric-card-description">
+                            Active RAM consumption
+                        </p>
                     </div>
-
-                    <p class="metric-description">
-                        Active memory consumption
-                    </p>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-card-header">
-                        <img
-                            src="assets/icons/disk.svg"
-                            alt="Disk"
-                            class="metric-icon"
-                        >
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/disk.svg"
+                                alt="Disk"
+                            >
+                        </div>
 
-                        <span class="metric-status healthy">
-                            Stable
-                        </span>
+                        <div class="metric-card-trend negative">
+                            -1.2%
+                        </div>
                     </div>
 
-                    <h3 class="metric-title">
-                        Disk Usage
-                    </h3>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            Disk Usage
+                        </h3>
 
-                    <div class="metric-value">
-                        57%
+                        <div class="metric-card-value">
+                            57%
+                        </div>
+
+                        <p class="metric-card-description">
+                            Storage allocation status
+                        </p>
                     </div>
-
-                    <p class="metric-description">
-                        Storage allocation status
-                    </p>
                 </div>
 
                 <div class="metric-card">
                     <div class="metric-card-header">
-                        <img
-                            src="assets/icons/network.svg"
-                            alt="Network"
-                            class="metric-icon"
-                        >
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/network.svg"
+                                alt="Network"
+                            >
+                        </div>
 
-                        <span class="metric-status healthy">
-                            Online
-                        </span>
+                        <div class="metric-card-trend positive">
+                            +8.7%
+                        </div>
                     </div>
 
-                    <h3 class="metric-title">
-                        Network Traffic
-                    </h3>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            Network Traffic
+                        </h3>
 
-                    <div class="metric-value">
-                        128 Mbps
-                    </div>
+                        <div class="metric-card-value">
+                            128 Mbps
+                        </div>
 
-                    <p class="metric-description">
-                        Current network throughput
-                    </p>
-                </div>
-            </section>
-
-            <section class="charts-section">
-                <div class="chart-card">
-                    <div class="chart-card-header">
-                        <h2>
-                            CPU Performance Trend
-                        </h2>
-                    </div>
-
-                    <div class="chart-container">
-                        <canvas id="cpu-chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="chart-card">
-                    <div class="chart-card-header">
-                        <h2>
-                            Memory Utilization Trend
-                        </h2>
-                    </div>
-
-                    <div class="chart-container">
-                        <canvas id="memory-chart"></canvas>
+                        <p class="metric-card-description">
+                            Current network throughput
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <section class="charts-section">
+            <section class="dashboard-charts">
                 <div class="chart-card">
                     <div class="chart-card-header">
-                        <h2>
-                            Disk Activity
-                        </h2>
+                        <div class="chart-card-info">
+                            <h3 class="chart-card-title">
+                                CPU Performance Trend
+                            </h3>
+
+                            <p class="chart-card-subtitle">
+                                Last 24 Hours
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="chart-container">
-                        <canvas id="disk-chart"></canvas>
+                    <div class="chart-card-body">
+                        <canvas
+                            id="cpu-chart"
+                            class="chart-canvas"
+                        ></canvas>
                     </div>
                 </div>
 
                 <div class="chart-card">
                     <div class="chart-card-header">
-                        <h2>
-                            Network Performance
-                        </h2>
+                        <div class="chart-card-info">
+                            <h3 class="chart-card-title">
+                                Memory Performance Trend
+                            </h3>
+
+                            <p class="chart-card-subtitle">
+                                Last 24 Hours
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="chart-container">
-                        <canvas id="network-chart"></canvas>
+                    <div class="chart-card-body">
+                        <canvas
+                            id="memory-chart"
+                            class="chart-canvas"
+                        ></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-charts">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <div class="chart-card-info">
+                            <h3 class="chart-card-title">
+                                Disk Activity
+                            </h3>
+
+                            <p class="chart-card-subtitle">
+                                Storage Monitoring
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card-body">
+                        <canvas
+                            id="disk-chart"
+                            class="chart-canvas"
+                        ></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <div class="chart-card-info">
+                            <h3 class="chart-card-title">
+                                Network Performance
+                            </h3>
+
+                            <p class="chart-card-subtitle">
+                                Traffic Monitoring
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card-body">
+                        <canvas
+                            id="network-chart"
+                            class="chart-canvas"
+                        ></canvas>
                     </div>
                 </div>
             </section>
@@ -377,8 +470,16 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/charts.js"></script>
-    <script src="js/metrics.js"></script>
-    <script src="js/main.js"></script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/state.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/charts.js"></script>
+    <script src="../js/metrics.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

@@ -1,154 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard | CyberPulse</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="../css/variables.css">
-<link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/layout.css">
-<link rel="stylesheet" href="../css/sidebar.css">
-<link rel="stylesheet" href="../css/navbar.css">
-<link rel="stylesheet" href="../css/cards.css">
-<link rel="stylesheet" href="../css/dashboard.css">
-<link rel="stylesheet" href="../css/responsive.css">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | CyberPulse</title>
+
+    <link
+        rel="icon"
+        href="../assets/logo/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/charts.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/tables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
 </head>
-
 <body>
-<div class="app-layout">
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img
+                    src="../assets/logo/cyberpulse-logo.png"
+                    alt="CyberPulse Logo"
+                    class="sidebar-logo"
+                >
 
-<aside class="sidebar">
-<div class="sidebar-header">
-<img src="../assets/logo/cyberpulse-logo.png" alt="CyberPulse Logo" class="sidebar-logo">
-<h2 class="sidebar-title">CyberPulse</h2>
-</div>
+                <h2 class="sidebar-title">
+                    CyberPulse
+                </h2>
+            </div>
 
-<nav class="sidebar-navigation">
-<ul class="sidebar-menu">
-<li><a href="../index.html">Dashboard</a></li>
-<li><a href="metrics.html">Metrics</a></li>
-<li><a href="alerts.html">Alerts</a></li>
-<li><a href="settings.html">Settings</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="login.html">Logout</a></li>
-</ul>
-</nav>
-</aside>
+            <nav class="sidebar-navigation">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a
+                            href="dashboard.html"
+                            class="active"
+                        >
+                            Dashboard
+                        </a>
+                    </li>
 
-<main class="main-content">
+                    <li>
+                        <a href="metrics.html">
+                            Metrics
+                        </a>
+                    </li>
 
-<header class="page-header">
-<div>
-<h1 class="page-title">Dashboard</h1>
-<p class="page-subtitle">Real-time system overview and performance insights</p>
-</div>
+                    <li>
+                        <a href="alerts.html">
+                            Alerts
+                        </a>
+                    </li>
 
-<div class="page-actions">
-<button class="btn btn-secondary">Refresh</button>
-<button class="btn btn-primary">Export</button>
-</div>
-</header>
+                    <li>
+                        <a href="settings.html">
+                            Settings
+                        </a>
+                    </li>
 
-<section class="dashboard-grid">
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-<div class="card">
-<h3>Total Uptime</h3>
-<div class="card-value">99.98%</div>
-<p class="card-description">System availability</p>
-</div>
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">
+                        Infrastructure Dashboard
+                    </h1>
 
-<div class="card">
-<h3>Active Servers</h3>
-<div class="card-value">24</div>
-<p class="card-description">Running instances</p>
-</div>
+                    <p class="page-subtitle">
+                        Real-time monitoring and operational intelligence
+                    </p>
+                </div>
 
-<div class="card">
-<h3>Active Alerts</h3>
-<div class="card-value">3</div>
-<p class="card-description">Require attention</p>
-</div>
+                <div class="page-actions">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                    >
+                        Export Report
+                    </button>
 
-<div class="card">
-<h3>Network Load</h3>
-<div class="card-value">68%</div>
-<p class="card-description">Current traffic usage</p>
-</div>
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                    >
+                        Refresh
+                    </button>
+                </div>
+            </header>
 
-</section>
+            <section class="metrics-overview">
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/cpu.svg"
+                                alt="CPU"
+                            >
+                        </div>
 
-<section class="dashboard-content">
+                        <div class="metric-card-trend positive">
+                            +4.8%
+                        </div>
+                    </div>
 
-<div class="card large">
-<h3>System Overview</h3>
-<canvas id="overview-chart"></canvas>
-</div>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            CPU Usage
+                        </h3>
 
-<div class="card large">
-<h3>Live Activity</h3>
-<div class="activity-feed">
+                        <div class="metric-card-value">
+                            42%
+                        </div>
 
-<div class="activity-item">
-<span class="status-dot green"></span>
-<span>Server API-01 is running normally</span>
-</div>
+                        <p class="metric-card-description">
+                            Current processor utilization
+                        </p>
+                    </div>
 
-<div class="activity-item">
-<span class="status-dot yellow"></span>
-<span>Memory usage above 80% on DB-02</span>
-</div>
+                    <div class="metric-card-footer">
+                        <div class="metric-card-progress">
+                            <div
+                                class="metric-card-progress-bar"
+                                style="width: 42%;"
+                            ></div>
+                        </div>
 
-<div class="activity-item">
-<span class="status-dot red"></span>
-<span>High CPU detected on PROD-03</span>
-</div>
+                        <span class="metric-card-status">
+                            Normal
+                        </span>
+                    </div>
+                </div>
 
-<div class="activity-item">
-<span class="status-dot green"></span>
-<span>Backup completed successfully</span>
-</div>
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/memory.svg"
+                                alt="Memory"
+                            >
+                        </div>
 
-</div>
-</div>
+                        <div class="metric-card-trend positive">
+                            +2.3%
+                        </div>
+                    </div>
 
-</section>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            Memory Usage
+                        </h3>
 
-<section class="dashboard-bottom">
+                        <div class="metric-card-value">
+                            68%
+                        </div>
 
-<div class="card">
-<h3>Quick Actions</h3>
-<button class="btn btn-primary">Run Diagnostics</button>
-<button class="btn btn-secondary">Restart Services</button>
-<button class="btn btn-secondary">View Logs</button>
-</div>
+                        <p class="metric-card-description">
+                            Active memory consumption
+                        </p>
+                    </div>
 
-<div class="card">
-<h3>System Status</h3>
-<ul class="status-list">
-<li>Database: Online</li>
-<li>API: Stable</li>
-<li>Auth Service: Online</li>
-<li>Storage: Healthy</li>
-</ul>
-</div>
+                    <div class="metric-card-footer">
+                        <div class="metric-card-progress">
+                            <div
+                                class="metric-card-progress-bar"
+                                style="width: 68%;"
+                            ></div>
+                        </div>
 
-</section>
+                        <span class="metric-card-status">
+                            Moderate
+                        </span>
+                    </div>
+                </div>
 
-<footer class="page-footer">
-<p>© 2026 CyberPulse. All Rights Reserved.</p>
-</footer>
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/disk.svg"
+                                alt="Disk"
+                            >
+                        </div>
 
-</main>
+                        <div class="metric-card-trend negative">
+                            -1.2%
+                        </div>
+                    </div>
 
-</div>
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            Disk Usage
+                        </h3>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/utils.js"></script>
-<script src="../js/dashboard.js"></script>
-<script src="../js/charts.js"></script>
-<script src="../js/main.js"></script>
+                        <div class="metric-card-value">
+                            57%
+                        </div>
 
+                        <p class="metric-card-description">
+                            Storage utilization
+                        </p>
+                    </div>
+
+                    <div class="metric-card-footer">
+                        <div class="metric-card-progress">
+                            <div
+                                class="metric-card-progress-bar"
+                                style="width: 57%;"
+                            ></div>
+                        </div>
+
+                        <span class="metric-card-status">
+                            Healthy
+                        </span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-card-header">
+                        <div class="metric-card-icon">
+                            <img
+                                src="../assets/icons/network.svg"
+                                alt="Network"
+                            >
+                        </div>
+
+                        <div class="metric-card-trend positive">
+                            +8.7%
+                        </div>
+                    </div>
+
+                    <div class="metric-card-body">
+                        <h3 class="metric-card-title">
+                            Network Traffic
+                        </h3>
+
+                        <div class="metric-card-value">
+                            128 Mbps
+                        </div>
+
+                        <p class="metric-card-description">
+                            Current throughput
+                        </p>
+                    </div>
+
+                    <div class="metric-card-footer">
+                        <div class="metric-card-progress">
+                            <div
+                                class="metric-card-progress-bar"
+                                style="width: 75%;"
+                            ></div>
+                        </div>
+
+                        <span class="metric-card-status">
+                            Stable
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-charts">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <div class="chart-card-info">
+                            <h3 class="chart-card-title">
+                                CPU Performance
+                            </h3>
+
+                            <p class="chart-card-subtitle">
+                                Real-Time Monitoring
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card-body">
+                        <canvas
+                            id="cpu-chart"
+                            class="chart-canvas"
+                        ></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <div class="chart-card-info">
+                            <h3 class="chart-card-title">
+                                Memory Performance
+                            </h3>
+
+                            <p class="chart-card-subtitle">
+                                Resource Tracking
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card-body">
+                        <canvas
+                            id="memory-chart"
+                            class="chart-canvas"
+                        ></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-alerts">
+                <div class="section-header">
+                    <h2>
+                        Active Alerts
+                    </h2>
+                </div>
+
+                <div class="alerts-list">
+                    <article class="alert-item critical">
+                        <h3>
+                            High CPU Usage Detected
+                        </h3>
+
+                        <p>
+                            Production server exceeded 90% CPU utilization.
+                        </p>
+                    </article>
+
+                    <article class="alert-item warning">
+                        <h3>
+                            Memory Threshold Warning
+                        </h3>
+
+                        <p>
+                            Memory consumption reached 82%.
+                        </p>
+                    </article>
+
+                    <article class="alert-item info">
+                        <h3>
+                            Scheduled Backup Completed
+                        </h3>
+
+                        <p>
+                            Daily backup process finished successfully.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <p>
+                    © 2026 CyberPulse. All Rights Reserved.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/state.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/charts.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

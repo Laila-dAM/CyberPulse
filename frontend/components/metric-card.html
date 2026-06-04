@@ -1,18 +1,23 @@
 <div class="metric-card">
+
     <div class="metric-card-header">
+
         <div class="metric-card-icon">
             <img
                 src="assets/icons/cpu.svg"
                 alt="CPU Usage"
+                class="metric-icon"
             >
         </div>
 
         <div class="metric-card-trend positive">
             +4.8%
         </div>
+
     </div>
 
     <div class="metric-card-body">
+
         <h3 class="metric-card-title">
             CPU Usage
         </h3>
@@ -24,61 +29,286 @@
         <p class="metric-card-description">
             Current processor utilization
         </p>
+
     </div>
 
     <div class="metric-card-footer">
+
         <div class="metric-card-progress">
+
             <div
                 class="metric-card-progress-bar"
                 style="width: 42%;"
             ></div>
+
         </div>
 
         <span class="metric-card-status">
             Normal
         </span>
+
     </div>
+
 </div>
 
 <template id="metric-card-template">
+
     <div class="metric-card">
+
         <div class="metric-card-header">
+
             <div class="metric-card-icon">
+
                 <img
                     class="metric-icon"
                     src=""
                     alt="Metric Icon"
                 >
+
             </div>
 
             <div class="metric-card-trend">
+
                 <span class="metric-trend-value"></span>
+
             </div>
+
         </div>
 
         <div class="metric-card-body">
+
             <h3 class="metric-card-title"></h3>
 
             <div class="metric-card-value"></div>
 
             <p class="metric-card-description"></p>
+
         </div>
 
         <div class="metric-card-footer">
+
             <div class="metric-card-progress">
+
                 <div class="metric-card-progress-bar"></div>
+
             </div>
 
             <span class="metric-card-status"></span>
+
         </div>
+
     </div>
+
 </template>
 
 <template id="metric-grid-template">
+
     <div class="metrics-grid">
-        <div class="metric-card"></div>
-        <div class="metric-card"></div>
-        <div class="metric-card"></div>
-        <div class="metric-card"></div>
+
+        <div class="metric-card">
+
+            <div class="metric-card-header">
+
+                <div class="metric-card-icon">
+                    <img
+                        src="assets/icons/cpu.svg"
+                        alt="CPU"
+                        class="metric-icon"
+                    >
+                </div>
+
+                <div class="metric-card-trend positive">
+                    +4.8%
+                </div>
+
+            </div>
+
+            <div class="metric-card-body">
+
+                <h3 class="metric-card-title">
+                    CPU Usage
+                </h3>
+
+                <div class="metric-card-value">
+                    42%
+                </div>
+
+                <p class="metric-card-description">
+                    Current processor utilization
+                </p>
+
+            </div>
+
+            <div class="metric-card-footer">
+
+                <div class="metric-card-progress">
+                    <div
+                        class="metric-card-progress-bar"
+                        style="width: 42%;"
+                    ></div>
+                </div>
+
+                <span class="metric-card-status">
+                    Normal
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="metric-card">
+
+            <div class="metric-card-header">
+
+                <div class="metric-card-icon">
+                    <img
+                        src="assets/icons/memory.svg"
+                        alt="Memory"
+                        class="metric-icon"
+                    >
+                </div>
+
+                <div class="metric-card-trend positive">
+                    +2.1%
+                </div>
+
+            </div>
+
+            <div class="metric-card-body">
+
+                <h3 class="metric-card-title">
+                    Memory Usage
+                </h3>
+
+                <div class="metric-card-value">
+                    68%
+                </div>
+
+                <p class="metric-card-description">
+                    Active memory consumption
+                </p>
+
+            </div>
+
+            <div class="metric-card-footer">
+
+                <div class="metric-card-progress">
+                    <div
+                        class="metric-card-progress-bar"
+                        style="width: 68%;"
+                    ></div>
+                </div>
+
+                <span class="metric-card-status">
+                    Moderate
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="metric-card">
+
+            <div class="metric-card-header">
+
+                <div class="metric-card-icon">
+                    <img
+                        src="assets/icons/disk.svg"
+                        alt="Disk"
+                        class="metric-icon"
+                    >
+                </div>
+
+                <div class="metric-card-trend negative">
+                    -1.2%
+                </div>
+
+            </div>
+
+            <div class="metric-card-body">
+
+                <h3 class="metric-card-title">
+                    Disk Usage
+                </h3>
+
+                <div class="metric-card-value">
+                    57%
+                </div>
+
+                <p class="metric-card-description">
+                    Storage allocation status
+                </p>
+
+            </div>
+
+            <div class="metric-card-footer">
+
+                <div class="metric-card-progress">
+                    <div
+                        class="metric-card-progress-bar"
+                        style="width: 57%;"
+                    ></div>
+                </div>
+
+                <span class="metric-card-status">
+                    Stable
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="metric-card">
+
+            <div class="metric-card-header">
+
+                <div class="metric-card-icon">
+                    <img
+                        src="assets/icons/network.svg"
+                        alt="Network"
+                        class="metric-icon"
+                    >
+                </div>
+
+                <div class="metric-card-trend positive">
+                    +8.4%
+                </div>
+
+            </div>
+
+            <div class="metric-card-body">
+
+                <h3 class="metric-card-title">
+                    Network Traffic
+                </h3>
+
+                <div class="metric-card-value">
+                    128 Mbps
+                </div>
+
+                <p class="metric-card-description">
+                    Current network throughput
+                </p>
+
+            </div>
+
+            <div class="metric-card-footer">
+
+                <div class="metric-card-progress">
+                    <div
+                        class="metric-card-progress-bar"
+                        style="width: 75%;"
+                    ></div>
+                </div>
+
+                <span class="metric-card-status">
+                    Healthy
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
+
 </template>

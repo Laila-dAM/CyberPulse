@@ -1,137 +1,157 @@
 <div class="alert-card critical">
+
     <div class="alert-card-header">
-        <div class="alert-card-icon">
-            <img
-                src="assets/icons/alert.svg"
-                alt="Critical Alert"
-            >
-        </div>
 
         <div class="alert-card-info">
+
             <h3 class="alert-card-title">
-                High CPU Usage
+                High CPU Usage Detected
             </h3>
 
-            <span class="alert-card-severity">
-                Critical
-            </span>
+            <p class="alert-card-category">
+                Infrastructure Monitoring
+            </p>
+
         </div>
 
-        <div class="alert-card-status">
-            Active
-        </div>
+        <span class="alert-severity critical">
+            Critical
+        </span>
+
     </div>
 
     <div class="alert-card-body">
-        <p class="alert-card-message">
-            CPU utilization exceeded the configured threshold and reached 92%.
+
+        <p class="alert-card-description">
+            CPU utilization exceeded the configured threshold and reached 94%.
         </p>
 
-        <div class="alert-card-metrics">
-            <div class="alert-metric">
-                <span class="alert-metric-label">
-                    Current Value
+        <div class="alert-card-details">
+
+            <div class="alert-detail">
+                <span class="alert-detail-label">
+                    Server
                 </span>
 
-                <span class="alert-metric-value">
-                    92%
+                <span class="alert-detail-value">
+                    Production-01
                 </span>
             </div>
 
-            <div class="alert-metric">
-                <span class="alert-metric-label">
-                    Threshold
+            <div class="alert-detail">
+                <span class="alert-detail-label">
+                    Status
                 </span>
 
-                <span class="alert-metric-value">
-                    80%
+                <span class="alert-detail-value">
+                    Active
                 </span>
             </div>
+
+            <div class="alert-detail">
+                <span class="alert-detail-label">
+                    Time
+                </span>
+
+                <span class="alert-detail-value">
+                    2 Minutes Ago
+                </span>
+            </div>
+
         </div>
+
     </div>
 
     <div class="alert-card-footer">
-        <span class="alert-card-time">
-            2 minutes ago
-        </span>
 
-        <div class="alert-card-actions">
+        <button
+            type="button"
+            class="alert-action-button secondary-action"
+        >
+            Ignore
+        </button>
+
+        <button
+            type="button"
+            class="alert-action-button primary-action"
+        >
+            Resolve
+        </button>
+
+    </div>
+
+</div>
+
+<template id="alert-card-template">
+
+    <article class="alert-card">
+
+        <div class="alert-card-header">
+
+            <div class="alert-card-info">
+
+                <h3 class="alert-card-title"></h3>
+
+                <p class="alert-card-category"></p>
+
+            </div>
+
+            <span class="alert-severity"></span>
+
+        </div>
+
+        <div class="alert-card-body">
+
+            <p class="alert-card-description"></p>
+
+            <div class="alert-card-details">
+
+                <div class="alert-detail">
+                    <span class="alert-detail-label">
+                        Server
+                    </span>
+
+                    <span class="alert-detail-value alert-server"></span>
+                </div>
+
+                <div class="alert-detail">
+                    <span class="alert-detail-label">
+                        Status
+                    </span>
+
+                    <span class="alert-detail-value alert-status"></span>
+                </div>
+
+                <div class="alert-detail">
+                    <span class="alert-detail-label">
+                        Time
+                    </span>
+
+                    <span class="alert-detail-value alert-time"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="alert-card-footer">
+
             <button
                 type="button"
-                class="btn btn-secondary"
+                class="alert-action-button secondary-action ignore-alert"
             >
                 Ignore
             </button>
 
             <button
                 type="button"
-                class="btn btn-primary"
+                class="alert-action-button primary-action resolve-alert"
             >
                 Resolve
             </button>
-        </div>
-    </div>
-</div>
 
-<template id="alert-card-template">
-    <div class="alert-card">
-        <div class="alert-card-header">
-            <div class="alert-card-icon">
-                <img
-                    src="assets/icons/alert.svg"
-                    alt="Alert"
-                >
-            </div>
-
-            <div class="alert-card-info">
-                <h3 class="alert-card-title"></h3>
-
-                <span class="alert-card-severity"></span>
-            </div>
-
-            <div class="alert-card-status"></div>
         </div>
 
-        <div class="alert-card-body">
-            <p class="alert-card-message"></p>
+    </article>
 
-            <div class="alert-card-metrics">
-                <div class="alert-metric">
-                    <span class="alert-metric-label">
-                        Current Value
-                    </span>
-
-                    <span class="alert-metric-value current-value"></span>
-                </div>
-
-                <div class="alert-metric">
-                    <span class="alert-metric-label">
-                        Threshold
-                    </span>
-
-                    <span class="alert-metric-value threshold-value"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-card-footer">
-            <span class="alert-card-time"></span>
-
-            <div class="alert-card-actions">
-                <button
-                    type="button"
-                    class="btn btn-secondary dismiss-alert"
-                >
-                    Dismiss
-                </button>
-
-                <button
-                    type="button"
-                    class="btn btn-primary resolve-alert"
-                >
-                    Resolve
-                </button>
-            </div>
-        </div>
-    </div>
 </template>

@@ -1,154 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CyberPulse</title>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="stylesheet" href="css/variables.css">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/dashboard.css">
-<link rel="stylesheet" href="css/responsive.css">
+    <title>CyberPulse</title>
+
+    <link
+        rel="icon"
+        href="assets/logo/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/charts.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/tables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/forms.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/alerts.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
 </head>
-
 <body>
+    <div class="landing-page">
+        <header class="landing-header">
+            <div class="landing-logo">
+                <img
+                    src="assets/logo/cyberpulse-logo.png"
+                    alt="CyberPulse Logo"
+                >
 
-<div class="app-layout">
+                <span>
+                    CyberPulse
+                </span>
+            </div>
 
-<aside class="sidebar">
-<div class="sidebar-header">
-<img src="assets/logo/cyberpulse-logo.png" alt="CyberPulse Logo" class="sidebar-logo">
-<h2 class="sidebar-title">CyberPulse</h2>
-</div>
+            <nav class="landing-navigation">
+                <a href="pages/dashboard.html">
+                    Dashboard
+                </a>
 
-<nav class="sidebar-navigation">
-<ul class="sidebar-menu">
-<li><a href="index.html" class="active">Dashboard</a></li>
-<li><a href="pages/metrics.html">Metrics</a></li>
-<li><a href="pages/alerts.html">Alerts</a></li>
-<li><a href="pages/settings.html">Settings</a></li>
-<li><a href="pages/about.html">About</a></li>
-<li><a href="pages/login.html">Login</a></li>
-</ul>
-</nav>
-</aside>
+                <a href="pages/metrics.html">
+                    Metrics
+                </a>
 
-<main class="main-content">
+                <a href="pages/alerts.html">
+                    Alerts
+                </a>
 
-<header class="page-header">
-<div>
-<h1 class="page-title">Dashboard</h1>
-<p class="page-subtitle">System overview and real-time monitoring</p>
-</div>
+                <a href="pages/about.html">
+                    About
+                </a>
 
-<div class="page-actions">
-<button class="btn btn-secondary">Refresh</button>
-<button class="btn btn-primary">Export</button>
-</div>
-</header>
+                <a
+                    href="pages/login.html"
+                    class="landing-login-button"
+                >
+                    Sign In
+                </a>
+            </nav>
+        </header>
 
-<section class="dashboard-grid">
+        <main class="landing-main">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        Infrastructure Monitoring Platform
+                    </span>
 
-<div class="card">
-<h3>System Health</h3>
-<div class="card-value">Good</div>
-<p class="card-description">Overall status</p>
-</div>
+                    <h1 class="hero-title">
+                        Monitor Infrastructure,
+                        Analyze Performance,
+                        Detect Issues Instantly
+                    </h1>
 
-<div class="card">
-<h3>Uptime</h3>
-<div class="card-value">99.9%</div>
-<p class="card-description">Last 30 days</p>
-</div>
+                    <p class="hero-description">
+                        CyberPulse provides real-time monitoring,
+                        analytics, alert management, and operational
+                        visibility for modern infrastructure
+                        environments.
+                    </p>
 
-<div class="card">
-<h3>Active Alerts</h3>
-<div class="card-value">5</div>
-<p class="card-description">Needs attention</p>
-</div>
+                    <div class="hero-actions">
+                        <a
+                            href="pages/dashboard.html"
+                            class="btn btn-primary"
+                        >
+                            Open Dashboard
+                        </a>
 
-<div class="card">
-<h3>Traffic</h3>
-<div class="card-value">120 Mbps</div>
-<p class="card-description">Current network load</p>
-</div>
+                        <a
+                            href="pages/about.html"
+                            class="btn btn-secondary"
+                        >
+                            Learn More
+                        </a>
+                    </div>
+                </div>
 
-</section>
+                <div class="hero-image">
+                    <img
+                        src="assets/images/hero-image.png"
+                        alt="CyberPulse Dashboard"
+                    >
+                </div>
+            </section>
 
-<section class="dashboard-content">
+            <section class="features-section">
+                <div class="section-header">
+                    <h2>
+                        Platform Features
+                    </h2>
 
-<div class="card large">
-<h3>Performance Overview</h3>
-<canvas id="overview-chart"></canvas>
-</div>
+                    <p>
+                        Everything needed to monitor and manage
+                        infrastructure performance.
+                    </p>
+                </div>
 
-<div class="card large">
-<h3>Recent Activity</h3>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <img
+                            src="assets/icons/cpu.svg"
+                            alt="CPU Monitoring"
+                        >
 
-<div class="activity-feed">
+                        <h3>
+                            Real-Time Metrics
+                        </h3>
 
-<div class="activity-item">
-<span class="status-dot green"></span>
-<span>System started successfully</span>
-</div>
+                        <p>
+                            Monitor CPU, memory, storage,
+                            and network activity continuously.
+                        </p>
+                    </article>
 
-<div class="activity-item">
-<span class="status-dot yellow"></span>
-<span>High memory usage detected</span>
-</div>
+                    <article class="feature-card">
+                        <img
+                            src="assets/icons/alert.svg"
+                            alt="Alerts"
+                        >
 
-<div class="activity-item">
-<span class="status-dot red"></span>
-<span>CPU spike on server 03</span>
-</div>
+                        <h3>
+                            Smart Alerts
+                        </h3>
 
-<div class="activity-item">
-<span class="status-dot green"></span>
-<span>Backup completed</span>
-</div>
+                        <p>
+                            Detect anomalies quickly with
+                            actionable notifications and alerts.
+                        </p>
+                    </article>
 
-</div>
+                    <article class="feature-card">
+                        <img
+                            src="assets/icons/network.svg"
+                            alt="Network"
+                        >
 
-</div>
+                        <h3>
+                            Network Visibility
+                        </h3>
 
-</section>
+                        <p>
+                            Analyze traffic patterns and
+                            infrastructure connectivity.
+                        </p>
+                    </article>
 
-<section class="dashboard-bottom">
+                    <article class="feature-card">
+                        <img
+                            src="assets/icons/settings.svg"
+                            alt="Settings"
+                        >
 
-<div class="card">
-<h3>Quick Actions</h3>
-<button class="btn btn-primary">Run Scan</button>
-<button class="btn btn-secondary">View Logs</button>
-<button class="btn btn-secondary">Restart Services</button>
-</div>
+                        <h3>
+                            Flexible Configuration
+                        </h3>
 
-<div class="card">
-<h3>System Status</h3>
-<ul class="status-list">
-<li>API: Online</li>
-<li>Database: Stable</li>
-<li>Auth: Running</li>
-<li>Storage: Healthy</li>
-</ul>
-</div>
+                        <p>
+                            Customize monitoring thresholds,
+                            notifications, and preferences.
+                        </p>
+                    </article>
+                </div>
+            </section>
 
-</section>
+            <section class="preview-section">
+                <div class="section-header">
+                    <h2>
+                        Dashboard Preview
+                    </h2>
 
-<footer class="page-footer">
-<p>© 2026 CyberPulse. All Rights Reserved.</p>
-</footer>
+                    <p>
+                        A modern interface built for performance monitoring.
+                    </p>
+                </div>
 
-</main>
+                <div class="preview-image">
+                    <img
+                        src="assets/images/dashboard-preview.png"
+                        alt="Dashboard Preview"
+                    >
+                </div>
+            </section>
 
-</div>
+            <section class="statistics-section">
+                <div class="statistics-grid">
+                    <div class="stat-card">
+                        <h3>
+                            99.99%
+                        </h3>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/charts.js"></script>
-<script src="js/main.js"></script>
+                        <p>
+                            Platform Availability
+                        </p>
+                    </div>
 
+                    <div class="stat-card">
+                        <h3>
+                            24/7
+                        </h3>
+
+                        <p>
+                            Continuous Monitoring
+                        </p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>
+                            500+
+                        </h3>
+
+                        <p>
+                            Metrics Collected
+                        </p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>
+                            Real-Time
+                        </h3>
+
+                        <p>
+                            Alert Processing
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="landing-footer">
+            <div class="footer-content">
+                <p>
+                    © 2026 CyberPulse. All Rights Reserved.
+                </p>
+
+                <span data-app-version>
+                    Version 1.0.0
+                </span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
