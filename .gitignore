@@ -1,9 +1,11 @@
-venv/
-.venv/
+**/venv/
+**/.venv/
+**/.env
 __pycache__/
+**/__pycache__/
 *.py[cod]
 .pytest_cache/
-.env
+**/.pytest_cache/
 *.db
 *.sqlite
 *.sqlite3
