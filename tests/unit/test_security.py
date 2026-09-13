@@ -1,23 +1,30 @@
-from backend.security.auth import verify_token, generate_token
-from backend.security.hashing import hash_password, verify_password
+from backend.core.security import (
+    create_access_token,
+    decode_access_token,
+    get_password_hash,
+    verify_password,
+)
+
 
 def test_password_hashing():
-    pwd = "CyberPulse123!"
-    hashed = hash_password(pwd)
+    password = "CyberPulse123!"
+    hashed = get_password_hash(password)
 
-    assert hashed != pwd
-    assert verify_password(pwd, hashed) is True
+    assert hashed != password
+    assert verify_password(password, hashed) is True
     assert verify_password("wrongpassword", hashed) is False
 
-def test_token_generation_and_verification():
-    token = generate_token({"user": "tester"})
-    data = verify_token(token)
 
-    assert data is not None
-    assert data.get("user") == "tester"
+def test_token_generation_and_verification():
+    token = create_access_token("tester")
+    data = decode_access_token(token)
+
+    assert data
+    assert data.get("sub") == "tester"
+
 
 def test_invalid_token():
-    invalid = "invalid.token.structure"
-    data = verify_token(invalid)
+    invalid_token = "invalid.token.structure"
+    data = decode_access_token(invalid_token)
 
-    assert data is None
+    assert data == {}

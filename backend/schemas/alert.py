@@ -1,11 +1,13 @@
-from pydantic import BaseModel
 from datetime import datetime
-from pydantic import ConfigDict
+from typing import Optional
+
+from pydantic import BaseModel, ConfigDict
+
 
 class Alert(BaseModel):
     id: int
-    metric_id: int
-    message: str
+    metric_id: Optional[int] = None
+    message: Optional[str] = None
     severity: str
     created_at: datetime
 
