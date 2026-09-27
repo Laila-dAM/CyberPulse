@@ -1,11 +1,13 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, JSON, func
-from backend.core.database import Base
-from passlib.context import CryptContext
+"""Database models for users and predictions."""
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+from sqlalchemy import Column, DateTime, Float, Integer, JSON, String, func
+
+from backend.core.database import Base
 
 
 class User(Base):
+    """Represent a user in the database."""
+
     __tablename__ = "users"
     __table_args__ = {"extend_existing": True}
 
@@ -16,6 +18,8 @@ class User(Base):
 
 
 class Prediction(Base):
+    """Represent a prediction in the database."""
+
     __tablename__ = "predictions"
     __table_args__ = {"extend_existing": True}
 
