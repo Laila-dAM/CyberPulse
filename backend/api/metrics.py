@@ -1,4 +1,6 @@
-from datetime import datetime
+"""Metrics API endpoints."""
+
+from datetime import datetime, timezone
 from typing import Optional
 
 from fastapi import APIRouter, Depends
@@ -14,6 +16,7 @@ router = APIRouter(prefix="/metrics", tags=["Metrics"])
 
 @router.get("/test")
 def test_metrics():
+    """Return a test metric."""
     return {
         "id": 1,
         "cpu": 55.5,
@@ -21,7 +24,7 @@ def test_metrics():
         "disk": 80.1,
         "network": 120.5,
         "temperature": 65.3,
-        "timestamp": datetime.utcnow(),
+        "timestamp": datetime.now(timezone.utc),
     }
 
 
@@ -31,6 +34,7 @@ def get_all_metrics(
     limit: int = 100,
     db: Session = Depends(get_db_session),
 ):
+    """Return all metrics with pagination."""
     return db.query(Metric).offset(skip).limit(limit).all()
 
 
@@ -38,6 +42,7 @@ def get_all_metrics(
 def get_latest_metric(
     db: Session = Depends(get_db_session),
 ):
+    """Return the latest metric."""
     latest_metric = (
         db.query(Metric)
         .order_by(Metric.timestamp.desc())
@@ -49,7 +54,7 @@ def get_latest_metric(
 
     return {
         "id": 0,
-        "timestamp": datetime.utcnow(),
+        "timestamp": datetime.now(timezone.utc),
         "cpu": 0.0,
         "ram": 0.0,
         "disk": 0.0,
@@ -65,6 +70,7 @@ def get_metric_history(
     limit: int = 100,
     db: Session = Depends(get_db_session),
 ):
+    """Return metrics within an optional date range."""
     query = db.query(Metric)
 
     if start is not None:

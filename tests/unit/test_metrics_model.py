@@ -1,4 +1,4 @@
-import datetime
+﻿import datetime
 
 from backend.models.metric import Metric
 
@@ -10,7 +10,7 @@ def test_metric_creation():
         disk=70,
         network=1024,
         temperature=55,
-        timestamp=datetime.datetime.utcnow(),
+        timestamp=datetime.datetime.now(datetime.timezone.utc),
     )
 
     assert metric.cpu == 50
@@ -32,7 +32,7 @@ def test_metric_default_values():
 
 
 def test_metric_timestamp_can_be_set():
-    timestamp = datetime.datetime.utcnow()
+    timestamp = datetime.datetime.now(datetime.timezone.utc)
 
     metric = Metric(timestamp=timestamp)
 
