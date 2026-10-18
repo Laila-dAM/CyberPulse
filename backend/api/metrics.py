@@ -1,9 +1,8 @@
 """Metrics API endpoints."""
 
 from datetime import datetime, timezone
-from typing import Optional
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from ..core.database import get_db_session
@@ -30,18 +29,16 @@ def test_metrics():
 
 @router.get("/", response_model=list[MetricSchema])
 def get_all_metrics(
-    skip: int = 0,
-    limit: int = 100,
+    skip: int = Query(default=0, ge=0),
+    limit: int = Query(default=100, ge=1, le=500),
     db: Session = Depends(get_db_session),
 ):
-    """Return all metrics with pagination."""
+    """Return metrics with pagination."""
     return db.query(Metric).offset(skip).limit(limit).all()
 
 
 @router.get("/latest", response_model=MetricSchema)
-def get_latest_metric(
-    db: Session = Depends(get_db_session),
-):
+def get_latest_metric(db: Session = Depends(get_db_session)):
     """Return the latest metric."""
     latest_metric = (
         db.query(Metric)
@@ -49,7 +46,7 @@ def get_latest_metric(
         .first()
     )
 
-    if latest_metric:
+    if latest_metric is not None:
         return latest_metric
 
     return {
@@ -65,12 +62,18 @@ def get_latest_metric(
 
 @router.get("/history", response_model=list[MetricSchema])
 def get_metric_history(
-    start: Optional[datetime] = None,
-    end: Optional[datetime] = None,
-    limit: int = 100,
+    start: datetime | None = None,
+    end: datetime | None = None,
+    limit: int = Query(default=100, ge=1, le=500),
     db: Session = Depends(get_db_session),
 ):
     """Return metrics within an optional date range."""
+    if start is not None and end is not None and start > end:
+        raise HTTPException(
+            status_code=400,
+            detail="Start date must be before or equal to end date",
+        )
+
     query = db.query(Metric)
 
     if start is not None:
