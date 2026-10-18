@@ -1,5 +1,3 @@
-from typing import Optional
-
 from fastapi import APIRouter
 from pydantic import BaseModel
 
@@ -8,14 +6,13 @@ router = APIRouter(prefix="/predict", tags=["Predict"])
 
 
 class PredictionRequest(BaseModel):
-    metric: Optional[str] = None
-    history: Optional[list[float]] = None
-
-    cpu_percent: Optional[float] = None
-    ram_percent: Optional[float] = None
-    disk_percent: Optional[float] = None
-    network_in: Optional[float] = None
-    network_out: Optional[float] = None
+    metric: str | None = None
+    history: list[float] | None = None
+    cpu_percent: float | None = None
+    ram_percent: float | None = None
+    disk_percent: float | None = None
+    network_in: float | None = None
+    network_out: float | None = None
 
 
 def predict_value(history: list[float]) -> float:
@@ -36,9 +33,9 @@ def predict_value(history: list[float]) -> float:
 
 
 def detect_snapshot_anomaly(
-    cpu_percent: Optional[float],
-    ram_percent: Optional[float],
-    disk_percent: Optional[float],
+    cpu_percent: float | None,
+    ram_percent: float | None,
+    disk_percent: float | None,
 ) -> bool:
     return (
         (cpu_percent is not None and cpu_percent >= 80)
@@ -47,7 +44,9 @@ def detect_snapshot_anomaly(
     )
 
 
-def build_snapshot_predictions(request: PredictionRequest) -> dict[str, float]:
+def build_snapshot_predictions(
+    request: PredictionRequest,
+) -> dict[str, float]:
     return {
         "cpu": float(request.cpu_percent or 0.0),
         "ram": float(request.ram_percent or 0.0),
@@ -59,9 +58,7 @@ def build_snapshot_predictions(request: PredictionRequest) -> dict[str, float]:
 
 @router.get("/")
 def get_prediction() -> dict[str, float]:
-    return {
-        "prediction": 0.0,
-    }
+    return {"prediction": 0.0}
 
 
 @router.post("/")
