@@ -1,14 +1,21 @@
 from datetime import datetime, timedelta, timezone
-from typing import Any, ClassVar
+from pathlib import Path
+from typing import Any
 
 from fastapi import Response
 from jose import jwt
 from passlib.context import CryptContext
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: ClassVar[str] = "sqlite:///../cyberpulse.db"
+    model_config = SettingsConfigDict(
+        env_file=Path(__file__).resolve().parents[1] / ".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
+
+    DATABASE_URL: str = "sqlite:///../cyberpulse.db"
     TOKEN_SECRET_KEY: str = "your_secret_key_here"
     TOKEN_ALGORITHM: str = "HS256"
     TOKEN_EXPIRE_MINUTES: int = 60
