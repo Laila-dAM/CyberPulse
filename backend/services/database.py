@@ -1,26 +1,11 @@
 from typing import List, Optional
 
-from sqlalchemy import create_engine, select
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
 from backend.models.metric import Metric
 from backend.models.alert import Alert
-from backend.core.config import settings
-
-
-# Database engine
-engine = create_engine(
-    settings.DATABASE_URL,
-    echo=False,
-    future=True,
-)
-
-# Session factory
-SessionLocal = sessionmaker(
-    bind=engine,
-    autocommit=False,
-    autoflush=False,
-)
+from backend.core.database import engine, SessionLocal
 
 
 def get_session() -> Session:
