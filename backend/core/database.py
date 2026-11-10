@@ -1,19 +1,45 @@
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base, Session
+
 from backend.core.config import settings
 
-engine = create_engine(settings.DATABASE_URL, connect_args={"check_same_thread": False})
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+database_url = settings.DATABASE_URL
+
+connect_args = (
+    {"check_same_thread": False}
+    if database_url.startswith("sqlite")
+    else {}
+)
+
+engine = create_engine(
+    database_url,
+    connect_args=connect_args,
+    pool_pre_ping=True,
+)
+
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine,
+)
+
 Base = declarative_base()
+
 
 def get_db_session():
     db: Session = SessionLocal()
+
     try:
         yield db
     finally:
         db.close()
 
+
 def init_db():
     import backend.models.metric
     import backend.models.alert
+    import backend.models.models
+
     Base.metadata.create_all(bind=engine)
