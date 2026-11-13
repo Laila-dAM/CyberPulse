@@ -1,3 +1,4 @@
+
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -8,12 +9,10 @@ from backend.api.auth import router as auth_router
 from backend.api.metrics import router as metrics_router
 from backend.api.predict import router as predict_router
 from backend.api.users import router as users_router
-from backend.core.database import init_db
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
-    init_db()
     yield
 
 

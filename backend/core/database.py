@@ -35,11 +35,3 @@ def get_db_session():
         yield db
     finally:
         db.close()
-
-
-def init_db():
-    import backend.models.metric
-    import backend.models.alert
-    import backend.models.models
-
-    Base.metadata.create_all(bind=engine)

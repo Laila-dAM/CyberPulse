@@ -1,5 +1,9 @@
-from backend.core.database import Base, engine
-from backend.models import models
+from alembic import command
+from alembic.config import Config
 
-Base.metadata.create_all(bind=engine)
-print("Database and tables created successfully.")
+
+config = Config("alembic.ini")
+
+command.upgrade(config, "head")
+
+print("Database schema is up to date.")
